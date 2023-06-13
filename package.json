@@ -2,7 +2,15 @@
     "name": "smarc_nodered_cnc",
     "description": "A Node-RED Project",
     "version": "0.0.1",
-    "dependencies": {},
+    "dependencies": {
+        "node-red-contrib-chartjs": "0.5.2",
+        "node-red-contrib-config": "1.2.1",
+        "node-red-contrib-utm": "0.1.3",
+        "node-red-contrib-web-worldmap": "2.29.0",
+        "node-red-dashboard": "3.2.0",
+        "node-red-node-ui-iframe": "0.2.1",
+        "node-red-node-ui-list": "0.3.6"
+    },
     "node-red": {
         "settings": {
             "flowFile": "flows.json",
