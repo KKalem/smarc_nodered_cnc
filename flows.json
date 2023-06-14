@@ -1650,16 +1650,6 @@
         "wires": []
     },
     {
-        "id": "7cfa15ac6e2817e6",
-        "type": "comment",
-        "z": "072468ee5a218dc0",
-        "name": "hi",
-        "info": "testing sync",
-        "x": 1050,
-        "y": 400,
-        "wires": []
-    },
-    {
         "id": "61ce2b718be73daf",
         "type": "function",
         "z": "65c60c3b274f73e3",
@@ -2927,7 +2917,7 @@
         "type": "function",
         "z": "65c60c3b274f73e3",
         "name": "center map on choice",
-        "func": "if(msg.payload == \"robot\"){\n    srn = global.get(\"gui.selected_robot_name\")    \n    robots = global.get(\"robot_states\")\n    robot = robots[srn]\n    if(!robot){\n        node.status(\"Bad robot\")\n        return\n    }\n    lat = robot.base.lat\n    lon = robot.base.lon\n}\nelse if(msg.payload == \"plan\"){\n    spn = global.get(\"gui.selected_plan_name\")    \n    plans = global.get(\"planning.plans\")\n    plan = plans[spn]\n    if(!plan) {\n        node.status(\"Bad plan\")\n        return\n    }\n    wp_0 = plan.waypoints[plan.waypoint_order[0]]\n    lat = wp_0.lat\n    lon = wp_0.lon\n}\nelse if(msg.payload == \"track\"){\n    stn = global.get(\"gui.selected_track_name\")\n    tracks = global.get(\"planning.tracks\")\n    track = tracks[stn]\n    if(!track){\n        node.status(\"Bad track\")\n        return\n    }\n    lat = track.data[0][2]\n    lon = track.data[0][3]\n}\nelse if(msg.payload == \"marker\"){\n    smn = global.get(\"gui.selected_marker_name\")\n    markers = global.get(\"gui.markers\")\n    marker = markers[smn]\n    if(!marker){\n        node.status(\"Bad marker\")\n        return\n    }\n    lat = marker.lat\n    lon = marker.lon\n}\nelse{\n    node.status(\"Bad choice\")\n    node.warn(msg)\n    return\n}\n\n\nm = {payload: {\n        command:{\n            lat: lat,\n            lon: lon,\n            zoom:19\n        }\n    }}\nnode.status(\"Good\")\n    \nreturn m",
+        "func": "if(msg.payload == \"robot\"){\n    srn = global.get(\"gui.selected_robot_name\")    \n    robots = global.get(\"robot_states\")\n    robot = robots[srn]\n    if(!robot){\n        node.status(\"Bad robot\")\n        return\n    }\n    lat = robot.base.lat\n    lon = robot.base.lon\n    if(!lat || !lon){\n        lat = robot.base.gps_lat\n        lon = robot.base.gps_lon\n    }\n}\nelse if(msg.payload == \"plan\"){\n    spn = global.get(\"gui.selected_plan_name\")    \n    plans = global.get(\"planning.plans\")\n    plan = plans[spn]\n    if(!plan) {\n        node.status(\"Bad plan\")\n        return\n    }\n    wp_0 = plan.waypoints[plan.waypoint_order[0]]\n    lat = wp_0.lat\n    lon = wp_0.lon\n}\nelse if(msg.payload == \"track\"){\n    stn = global.get(\"gui.selected_track_name\")\n    tracks = global.get(\"planning.tracks\")\n    track = tracks[stn]\n    if(!track){\n        node.status(\"Bad track\")\n        return\n    }\n    lat = track.data[0][2]\n    lon = track.data[0][3]\n}\nelse if(msg.payload == \"marker\"){\n    smn = global.get(\"gui.selected_marker_name\")\n    markers = global.get(\"gui.markers\")\n    marker = markers[smn]\n    if(!marker){\n        node.status(\"Bad marker\")\n        return\n    }\n    lat = marker.lat\n    lon = marker.lon\n}\nelse{\n    node.status(\"Bad choice\")\n    node.warn(msg)\n    return\n}\n\n\nm = {payload: {\n        command:{\n            lat: lat,\n            lon: lon,\n            zoom:19\n        }\n    }}\nnode.status(\"Good\")\n    \nreturn m",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -9439,8 +9429,8 @@
         "url": "https://nodered.blue-robots.com/simple",
         "origin": "*",
         "scale": 100,
-        "x": 170,
-        "y": 800,
+        "x": 510,
+        "y": 920,
         "wires": [
             []
         ]
@@ -9458,8 +9448,8 @@
         "format": "Upload plan",
         "layout": "col-center",
         "className": "",
-        "x": 180,
-        "y": 760,
+        "x": 520,
+        "y": 880,
         "wires": []
     },
     {
@@ -9552,8 +9542,8 @@
         "format": "<a target=\"_blank\" href=\"https://nodered.blue-robots.com/static/{{msg.payload}}.json\">Download track</a> ",
         "layout": "col-center",
         "className": "",
-        "x": 360,
-        "y": 1120,
+        "x": 380,
+        "y": 1420,
         "wires": []
     },
     {
@@ -9564,8 +9554,8 @@
         "links": [
             "8ed7c0d75e2bcd8b"
         ],
-        "x": 245,
-        "y": 1120,
+        "x": 265,
+        "y": 1420,
         "wires": [
             [
                 "721e8d283bc2c07f"
@@ -9578,8 +9568,8 @@
         "z": "2e13c73254d13882",
         "name": "download track",
         "info": "",
-        "x": 300,
-        "y": 1080,
+        "x": 320,
+        "y": 1380,
         "wires": []
     },
     {
@@ -9593,8 +9583,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 310,
-        "y": 1240,
+        "x": 330,
+        "y": 1540,
         "wires": [
             [
                 "b63b6e1f8450e64b"
@@ -9617,8 +9607,8 @@
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 480,
-        "y": 1200,
+        "x": 500,
+        "y": 1500,
         "wires": [
             []
         ]
@@ -9632,8 +9622,8 @@
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 150,
-        "y": 1240,
+        "x": 170,
+        "y": 1540,
         "wires": [
             [
                 "8bd8df7d765146a7"
@@ -9647,8 +9637,8 @@
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 790,
-        "y": 1280,
+        "x": 810,
+        "y": 1580,
         "wires": []
     },
     {
@@ -9662,8 +9652,8 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 640,
-        "y": 1240,
+        "x": 660,
+        "y": 1540,
         "wires": [
             [
                 "535c370d20467ae1"
@@ -9681,8 +9671,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 640,
-        "y": 1300,
+        "x": 660,
+        "y": 1600,
         "wires": [
             [
                 "535c370d20467ae1"
@@ -9702,8 +9692,8 @@
             "c729e083d5310c8d"
         ],
         "uncaught": false,
-        "x": 490,
-        "y": 1320,
+        "x": 510,
+        "y": 1620,
         "wires": [
             [
                 "745d7943eb94d390"
@@ -9727,8 +9717,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 490,
-        "y": 1240,
+        "x": 510,
+        "y": 1540,
         "wires": [
             [
                 "c729e083d5310c8d"
@@ -9741,8 +9731,8 @@
         "z": "2e13c73254d13882",
         "name": "saves a file, then downloads it as track.json",
         "info": "",
-        "x": 220,
-        "y": 1180,
+        "x": 240,
+        "y": 1480,
         "wires": []
     },
     {
@@ -9762,8 +9752,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 490,
-        "y": 1280,
+        "x": 510,
+        "y": 1580,
         "wires": [
             [
                 "535c370d20467ae1"
@@ -9776,8 +9766,8 @@
         "z": "2e13c73254d13882",
         "name": "Track download",
         "info": "",
-        "x": 100,
-        "y": 1040,
+        "x": 120,
+        "y": 1340,
         "wires": []
     },
     {
@@ -9819,7 +9809,7 @@
         "publicIPv4": true,
         "publicIPv6": false,
         "x": 250,
-        "y": 540,
+        "y": 920,
         "wires": [
             [
                 "2076ff5c9f6b6736"
@@ -9847,8 +9837,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 110,
-        "y": 540,
+        "x": 210,
+        "y": 880,
         "wires": [
             [
                 "52216b3dadbe1f72"
@@ -9860,16 +9850,23 @@
         "type": "function",
         "z": "2e13c73254d13882",
         "name": "",
-        "func": "if(msg.payload.publicIPv4 == \"20.240.40.232\"){\n    node.status(\"Cloud\")\n}else{\n    node.status(\"Local\")\n    return {ui_control:{URL:\"localhost:1880/simple\"}}    \n}",
-        "outputs": 1,
+        "func": "if(msg.payload.publicIPv4 == \"20.240.40.232\"){\n    node.status(\"Cloud\")\n    return [{enabled:true}, {enabled:false}]\n}else{\n    node.status(\"Local\")\n    return [{enabled:false}, {enabled:true}]\n}",
+        "outputs": 2,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 380,
-        "y": 540,
+        "x": 280,
+        "y": 960,
         "wires": [
-            []
+            [
+                "493265f2fecd14e5",
+                "eec00c41a09c75ec"
+            ],
+            [
+                "333d9c794d31a2b3",
+                "9f8d79fbca1c1056"
+            ]
         ]
     },
     {
@@ -9884,8 +9881,8 @@
         "url": "http://localhost:1880/simple",
         "origin": "*",
         "scale": 100,
-        "x": 190,
-        "y": 880,
+        "x": 530,
+        "y": 1020,
         "wires": [
             []
         ]
@@ -9903,8 +9900,8 @@
         "format": "Upload plan to local",
         "layout": "col-center",
         "className": "",
-        "x": 200,
-        "y": 840,
+        "x": 540,
+        "y": 980,
         "wires": []
     },
     {
