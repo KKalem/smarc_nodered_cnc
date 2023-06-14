@@ -9044,7 +9044,7 @@
         "type": "function",
         "z": "2e13c73254d13882",
         "name": "prepare plan",
-        "func": "name = global.get(\"gui.selected_plan_name\")\nif(!name) return\nplans = global.get(\"planning.plans\")\nplan = plans[name]\nif(!plan) return\n\nlines = []\n\nfor(const wp_name of plan.waypoint_order){\n    wp = plan.waypoints[wp_name]\n    line = [\n        wp.name,\n        wp.lat,\n        wp.lon,\n        wp.depth,\n        wp.rpm,\n        wp.speed,\n        wp.use_rpm,\n        wp.tolerance]\n    lines.push(line)\n}\n\nfp = \"/data/static/\"+ plan.name+ \".csv\"\nsave_out = {payload:lines, filename:fp}\nmsg.filename = fp\nreturn [save_out, msg, null]\n\n",
+        "func": "name = global.get(\"gui.selected_plan_name\")\nif(!name) return\nplans = global.get(\"planning.plans\")\nplan = plans[name]\nif(!plan) return\n\nlines = []\n\nfor(const wp_name of plan.waypoint_order){\n    wp = plan.waypoints[wp_name]\n    line = [\n        wp.name,\n        wp.lat,\n        wp.lon,\n        wp.depth,\n        wp.rpm,\n        wp.speed,\n        wp.use_rpm,\n        wp.tolerance,\n        wp.arrival_heading,\n        wp.use_heading]\n    lines.push(line)\n}\n\nfp = \"/data/static/\"+ plan.name+ \".csv\"\nsave_out = {payload:lines, filename:fp}\nmsg.filename = fp\nreturn [save_out, msg, null]\n\n",
         "outputs": 3,
         "noerr": 0,
         "initialize": "",
@@ -9257,7 +9257,7 @@
         "hdrout": "all",
         "multi": "mult",
         "ret": "\\n",
-        "temp": "name, lat, lon, depth, rpm, speed, use_rpm",
+        "temp": "name, lat, lon, depth, rpm, speed, use_rpm, tolerance, arrival_heading, use_heading",
         "skip": "0",
         "strings": true,
         "include_empty_strings": "",
@@ -9311,6 +9311,8 @@
         "type": "http response",
         "z": "2e13c73254d13882",
         "name": "",
+        "statusCode": "",
+        "headers": {},
         "x": 650,
         "y": 680,
         "wires": []
@@ -9320,6 +9322,8 @@
         "type": "http response",
         "z": "2e13c73254d13882",
         "name": "",
+        "statusCode": "",
+        "headers": {},
         "x": 650,
         "y": 720,
         "wires": []
@@ -9386,11 +9390,11 @@
         "z": "2e13c73254d13882",
         "name": "",
         "sep": ",",
-        "hdrin": "",
+        "hdrin": true,
         "hdrout": "all",
         "multi": "mult",
         "ret": "\\n",
-        "temp": "name, lat, lon, depth, rpm, speed, use_rpm, tolerance",
+        "temp": "name, lat, lon, depth, rpm, speed, use_rpm, tolerance, arrival_heading, use_heading",
         "skip": "0",
         "strings": true,
         "include_empty_strings": "",
@@ -9790,6 +9794,73 @@
         "wires": [
             [
                 "3a33c5377001053c"
+            ]
+        ]
+    },
+    {
+        "id": "52216b3dadbe1f72",
+        "type": "ip",
+        "z": "2e13c73254d13882",
+        "name": "ip",
+        "https": false,
+        "timeout": "5000",
+        "internalIPv4": true,
+        "internalIPv6": false,
+        "publicIPv4": true,
+        "publicIPv6": false,
+        "x": 250,
+        "y": 540,
+        "wires": [
+            [
+                "2076ff5c9f6b6736"
+            ]
+        ]
+    },
+    {
+        "id": "d87950903589a65c",
+        "type": "inject",
+        "z": "2e13c73254d13882",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 540,
+        "wires": [
+            [
+                "52216b3dadbe1f72"
+            ]
+        ]
+    },
+    {
+        "id": "2076ff5c9f6b6736",
+        "type": "function",
+        "z": "2e13c73254d13882",
+        "name": "",
+        "func": "if(msg.payload.publicIPv4 == \"20.240.40.232\"){\n    node.status(\"Cloud\")\n}else{\n    node.status(\"Local\")\n    return {ui_control:{URL:\"localhost:1880/simple\"}}    \n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 540,
+        "wires": [
+            [
+                "eec00c41a09c75ec"
             ]
         ]
     },
