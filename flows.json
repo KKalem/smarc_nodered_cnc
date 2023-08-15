@@ -1673,9 +1673,7 @@
         "x": 570,
         "y": 720,
         "wires": [
-            [
-                "93d9f503a3372651"
-            ]
+            []
         ]
     },
     {
@@ -1703,8 +1701,8 @@
         "showgrid": "true",
         "allowFileDrop": "false",
         "path": "/worldmap",
-        "overlist": "SN",
-        "maplist": "EsriS,NatGeo",
+        "overlist": "",
+        "maplist": "EsriS",
         "mapname": "Bathy",
         "mapurl": "https://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
         "mapopt": "{ \"maxZoom\":22,\"attribution\":\"&copy; GEBCO\",\"format\":\"image/jpeg\",\"request\":\"getmap\",\"service\":\",\"layers\":\"gebco_latest_2_sub_ice_topo\"}",
@@ -1753,7 +1751,7 @@
         "links": [
             "1e0bd19ab17b797e"
         ],
-        "x": 685,
+        "x": 825,
         "y": 740,
         "wires": []
     },
@@ -1893,7 +1891,9 @@
         "wires": [
             [
                 "61ce2b718be73daf",
-                "24bfe69168ea9d8c"
+                "24bfe69168ea9d8c",
+                "f24fe9111c802e55",
+                "05690f4fe18f582b"
             ]
         ]
     },
@@ -1982,7 +1982,7 @@
         "z": "65c60c3b274f73e3",
         "name": "map",
         "info": "",
-        "x": 770,
+        "x": 910,
         "y": 740,
         "wires": []
     },
@@ -2554,7 +2554,7 @@
         "z": "65c60c3b274f73e3",
         "name": "map",
         "info": "",
-        "x": 740,
+        "x": 730,
         "y": 480,
         "wires": []
     },
@@ -3203,6 +3203,73 @@
         "wires": [
             [
                 "8ff876fe5c2fd0c0"
+            ]
+        ]
+    },
+    {
+        "id": "f24fe9111c802e55",
+        "type": "function",
+        "z": "65c60c3b274f73e3",
+        "name": "mapproxy swe_bathy",
+        "func": "msg = {payload:{command:{}}};\nmsg.payload.command.map = {\n    \"overlay\":\"Swe Bathy\", \n    \"url\":\"http://localhost/mapproxy/service\",\n    \"opt\":{ \n        \"map\":\"swe_bathy\",\n        \"layers\":\"swe_bathy\",\n        \"format\":\"image/png\",\n        \"transparent\":true\n    },\n    \"wms\":true\n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 680,
+        "wires": [
+            [
+                "93d9f503a3372651"
+            ]
+        ]
+    },
+    {
+        "id": "05690f4fe18f582b",
+        "type": "function",
+        "z": "65c60c3b274f73e3",
+        "name": "mapproxy arcgis_world",
+        "func": "msg = {payload:{command:{}}};\nmsg.payload.command.map = {\n    \"name\":\"Esri Sat (SMaRC Cache)\", \n    \"url\":\"http://localhost/mapproxy/service\",\n    \"opt\":{ \n        \"map\":\"arcgis_world\",\n        \"layers\":\"arcgis_world\",\n        \"format\":\"image/png\"\n    },\n    \"wms\":true\n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 640,
+        "wires": [
+            [
+                "93d9f503a3372651"
+            ]
+        ]
+    },
+    {
+        "id": "b6b896db66bb0c3c",
+        "type": "inject",
+        "z": "65c60c3b274f73e3",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 360,
+        "y": 660,
+        "wires": [
+            [
+                "05690f4fe18f582b"
             ]
         ]
     },
