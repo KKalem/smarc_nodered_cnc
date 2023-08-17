@@ -9465,7 +9465,7 @@
         "url": "https://nodered.blue-robots.com/simple",
         "origin": "*",
         "scale": 100,
-        "x": 510,
+        "x": 650,
         "y": 920,
         "wires": [
             []
@@ -9484,7 +9484,11 @@
         "format": "Upload plan",
         "layout": "col-center",
         "className": "",
-        "x": 520,
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 660,
         "y": 880,
         "wires": []
     },
@@ -9845,7 +9849,7 @@
         "url": "http://localhost:1880/simple",
         "origin": "*",
         "scale": 100,
-        "x": 530,
+        "x": 670,
         "y": 1020,
         "wires": [
             []
@@ -9864,7 +9868,7 @@
         "format": "Upload plan to local",
         "layout": "col-center",
         "className": "",
-        "x": 540,
+        "x": 680,
         "y": 980,
         "wires": []
     },
@@ -9889,8 +9893,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 210,
-        "y": 880,
+        "x": 150,
+        "y": 940,
         "wires": [
             [
                 "52216b3dadbe1f72"
@@ -9908,8 +9912,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 420,
-        "y": 540,
+        "x": 440,
+        "y": 940,
         "wires": [
             []
         ]
@@ -9925,8 +9929,8 @@
         "internalIPv6": false,
         "publicIPv4": true,
         "publicIPv6": false,
-        "x": 270,
-        "y": 540,
+        "x": 290,
+        "y": 940,
         "wires": [
             [
                 "2076ff5c9f6b6736"
