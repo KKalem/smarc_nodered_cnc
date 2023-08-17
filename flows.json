@@ -1650,16 +1650,6 @@
         "wires": []
     },
     {
-        "id": "7cfa15ac6e2817e6",
-        "type": "comment",
-        "z": "072468ee5a218dc0",
-        "name": "hi",
-        "info": "testing sync",
-        "x": 1050,
-        "y": 400,
-        "wires": []
-    },
-    {
         "id": "61ce2b718be73daf",
         "type": "function",
         "z": "65c60c3b274f73e3",
@@ -1670,8 +1660,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 570,
-        "y": 720,
+        "x": 1450,
+        "y": 780,
         "wires": [
             []
         ]
@@ -1688,7 +1678,7 @@
         "lat": "58.25089840041283",
         "lon": "11.4500587783608",
         "zoom": "16",
-        "layer": "EsriS",
+        "layer": "Custom",
         "cluster": "",
         "maxage": "",
         "usermenu": "show",
@@ -1702,10 +1692,10 @@
         "allowFileDrop": "false",
         "path": "/worldmap",
         "overlist": "",
-        "maplist": "EsriS",
-        "mapname": "Bathy",
-        "mapurl": "https://www.gebco.net/data_and_products/gebco_web_services/web_map_service/mapserv",
-        "mapopt": "{ \"maxZoom\":22,\"attribution\":\"&copy; GEBCO\",\"format\":\"image/jpeg\",\"request\":\"getmap\",\"service\":\",\"layers\":\"gebco_latest_2_sub_ice_topo\"}",
+        "maplist": "OSMC,EsriS,EsriT,EsriO",
+        "mapname": "Esri Sat (SMaRC)",
+        "mapurl": "http://localhost:1889/mapproxy/service",
+        "mapopt": "{          \"map\":\"arcgis_world\",         \"layers\":\"arcgis_world\",         \"format\":\"image/png\"     }",
         "mapwms": true,
         "x": 1260,
         "y": 80,
@@ -1751,8 +1741,8 @@
         "links": [
             "1e0bd19ab17b797e"
         ],
-        "x": 825,
-        "y": 740,
+        "x": 785,
+        "y": 800,
         "wires": []
     },
     {
@@ -1887,13 +1877,11 @@
             "ecb32f1e69ab1244"
         ],
         "x": 445,
-        "y": 720,
+        "y": 780,
         "wires": [
             [
-                "61ce2b718be73daf",
                 "24bfe69168ea9d8c",
-                "f24fe9111c802e55",
-                "05690f4fe18f582b"
+                "f24fe9111c802e55"
             ]
         ]
     },
@@ -1947,7 +1935,7 @@
         "name": "connected",
         "info": "",
         "x": 360,
-        "y": 720,
+        "y": 780,
         "wires": []
     },
     {
@@ -1959,7 +1947,7 @@
             "acaa0403e6b2f92a"
         ],
         "x": 305,
-        "y": 760,
+        "y": 820,
         "wires": [
             [
                 "be264f174c773c7e"
@@ -1973,7 +1961,7 @@
         "name": "button",
         "info": "",
         "x": 230,
-        "y": 760,
+        "y": 820,
         "wires": []
     },
     {
@@ -1982,8 +1970,8 @@
         "z": "65c60c3b274f73e3",
         "name": "map",
         "info": "",
-        "x": 910,
-        "y": 740,
+        "x": 870,
+        "y": 800,
         "wires": []
     },
     {
@@ -1998,7 +1986,7 @@
         "finalize": "",
         "libs": [],
         "x": 400,
-        "y": 760,
+        "y": 820,
         "wires": [
             [
                 "24bfe69168ea9d8c"
@@ -2017,7 +2005,7 @@
         "finalize": "",
         "libs": [],
         "x": 570,
-        "y": 760,
+        "y": 820,
         "wires": [
             [
                 "93d9f503a3372651"
@@ -2166,8 +2154,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 540,
-        "y": 880,
+        "x": 520,
+        "y": 1040,
         "wires": [
             [
                 "d01a1c27b3eb717f",
@@ -2187,8 +2175,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 750,
-        "y": 880,
+        "x": 730,
+        "y": 1040,
         "wires": [
             [
                 "7e03fe39a9e4785c"
@@ -2227,8 +2215,8 @@
         "links": [
             "ecb32f1e69ab1244"
         ],
-        "x": 305,
-        "y": 880,
+        "x": 285,
+        "y": 1040,
         "wires": [
             [
                 "84dfa6ecdba12005"
@@ -2241,8 +2229,8 @@
         "z": "65c60c3b274f73e3",
         "name": "connected",
         "info": "",
-        "x": 220,
-        "y": 880,
+        "x": 200,
+        "y": 1040,
         "wires": []
     },
     {
@@ -2264,8 +2252,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 390,
-        "y": 880,
+        "x": 370,
+        "y": 1040,
         "wires": [
             [
                 "87855a030ad4b56e"
@@ -2291,8 +2279,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 780,
-        "y": 920,
+        "x": 760,
+        "y": 1080,
         "wires": [
             [
                 "836e9b2d666ea992"
@@ -2310,8 +2298,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 790,
-        "y": 1060,
+        "x": 770,
+        "y": 1240,
         "wires": [
             [
                 "c7d4d5de96d19781",
@@ -2352,8 +2340,8 @@
             "38442de6ffbfa350",
             "338233d5c53202af"
         ],
-        "x": 225,
-        "y": 1040,
+        "x": 205,
+        "y": 1220,
         "wires": [
             [
                 "8e14da82f369a630"
@@ -2366,8 +2354,8 @@
         "z": "65c60c3b274f73e3",
         "name": "update_markers_on_map",
         "info": "",
-        "x": 210,
-        "y": 1080,
+        "x": 190,
+        "y": 1260,
         "wires": []
     },
     {
@@ -2376,8 +2364,8 @@
         "z": "65c60c3b274f73e3",
         "name": "update_markers_on_map",
         "info": "",
-        "x": 1070,
-        "y": 920,
+        "x": 1050,
+        "y": 1080,
         "wires": []
     },
     {
@@ -2389,8 +2377,8 @@
         "links": [
             "bb3002ce85983e34"
         ],
-        "x": 935,
-        "y": 920,
+        "x": 915,
+        "y": 1080,
         "wires": []
     },
     {
@@ -2404,8 +2392,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 530,
-        "y": 1040,
+        "x": 510,
+        "y": 1220,
         "wires": [
             [
                 "c7d4d5de96d19781"
@@ -2429,8 +2417,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 730,
-        "y": 1100,
+        "x": 710,
+        "y": 1280,
         "wires": [
             [
                 "c7d4d5de96d19781",
@@ -2517,8 +2505,8 @@
         "links": [
             "ecb32f1e69ab1244"
         ],
-        "x": 395,
-        "y": 1000,
+        "x": 375,
+        "y": 1180,
         "wires": [
             [
                 "d2f284617e677636"
@@ -2531,8 +2519,8 @@
         "z": "65c60c3b274f73e3",
         "name": "connected",
         "info": "",
-        "x": 300,
-        "y": 1000,
+        "x": 280,
+        "y": 1180,
         "wires": []
     },
     {
@@ -2567,8 +2555,8 @@
         "links": [
             "1e0bd19ab17b797e"
         ],
-        "x": 1165,
-        "y": 1040,
+        "x": 1145,
+        "y": 1220,
         "wires": []
     },
     {
@@ -2577,8 +2565,8 @@
         "z": "65c60c3b274f73e3",
         "name": "map",
         "info": "",
-        "x": 1240,
-        "y": 1040,
+        "x": 1220,
+        "y": 1220,
         "wires": []
     },
     {
@@ -2592,8 +2580,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1270,
-        "y": 1120,
+        "x": 1250,
+        "y": 1300,
         "wires": [
             []
         ]
@@ -2607,8 +2595,8 @@
         "links": [
             "1e0bd19ab17b797e"
         ],
-        "x": 935,
-        "y": 880,
+        "x": 915,
+        "y": 1040,
         "wires": []
     },
     {
@@ -2617,8 +2605,8 @@
         "z": "65c60c3b274f73e3",
         "name": "map",
         "info": "",
-        "x": 1010,
-        "y": 880,
+        "x": 990,
+        "y": 1040,
         "wires": []
     },
     {
@@ -2632,8 +2620,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 730,
-        "y": 1140,
+        "x": 710,
+        "y": 1320,
         "wires": [
             [
                 "c7d4d5de96d19781",
@@ -2650,8 +2638,8 @@
             "7dd2fd0c91d149d6",
             "064286a6a174b304"
         ],
-        "x": 425,
-        "y": 840,
+        "x": 405,
+        "y": 1000,
         "wires": [
             [
                 "87855a030ad4b56e"
@@ -2664,8 +2652,8 @@
         "z": "65c60c3b274f73e3",
         "name": "toggle planning mode toggle",
         "info": "",
-        "x": 280,
-        "y": 840,
+        "x": 260,
+        "y": 1000,
         "wires": []
     },
     {
@@ -2679,8 +2667,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 940,
-        "y": 1160,
+        "x": 920,
+        "y": 1340,
         "wires": [
             [
                 "c7d4d5de96d19781",
@@ -2699,8 +2687,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 940,
-        "y": 1200,
+        "x": 920,
+        "y": 1380,
         "wires": [
             [
                 "d443219a2ff95383",
@@ -2719,8 +2707,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 740,
-        "y": 1180,
+        "x": 720,
+        "y": 1360,
         "wires": [
             [
                 "2eee1d2a8a2e7b36",
@@ -2738,8 +2726,8 @@
             "f73376f194b1fc1a",
             "5258271b9369afd2"
         ],
-        "x": 675,
-        "y": 840,
+        "x": 655,
+        "y": 1000,
         "wires": []
     },
     {
@@ -2748,8 +2736,8 @@
         "z": "65c60c3b274f73e3",
         "name": "compare gui and robot plans",
         "info": "",
-        "x": 920,
-        "y": 840,
+        "x": 900,
+        "y": 1000,
         "wires": []
     },
     {
@@ -2769,8 +2757,8 @@
         "drop": true,
         "allowrate": false,
         "outputs": 1,
-        "x": 340,
-        "y": 1040,
+        "x": 320,
+        "y": 1220,
         "wires": [
             [
                 "d2f284617e677636"
@@ -3211,14 +3199,14 @@
         "type": "function",
         "z": "65c60c3b274f73e3",
         "name": "mapproxy swe_bathy",
-        "func": "msg = {payload:{command:{}}};\nmsg.payload.command.map = {\n    \"overlay\":\"Swe Bathy\", \n    \"url\":\"http://localhost/mapproxy/service\",\n    \"opt\":{ \n        \"map\":\"swe_bathy\",\n        \"layers\":\"swe_bathy\",\n        \"format\":\"image/png\",\n        \"transparent\":true\n    },\n    \"wms\":true\n};\n\nreturn msg;",
+        "func": "msg = {payload:{command:{}}};\nmsg.payload.command.map = {\n    \"overlay\":\"Swe Bathy\", \n    \"url\":\"http://localhost:1889/mapproxy/service\",\n    \"opt\":{ \n        \"map\":\"swe_bathy\",\n        \"layers\":\"swe_bathy\",\n        \"format\":\"image/png\",\n        \"transparent\":true\n    },\n    \"wms\":true\n};\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 600,
-        "y": 680,
+        "y": 780,
         "wires": [
             [
                 "93d9f503a3372651"
@@ -3230,48 +3218,37 @@
         "type": "function",
         "z": "65c60c3b274f73e3",
         "name": "mapproxy arcgis_world",
-        "func": "msg = {payload:{command:{}}};\nmsg.payload.command.map = {\n    \"name\":\"Esri Sat (SMaRC Cache)\", \n    \"url\":\"http://localhost/mapproxy/service\",\n    \"opt\":{ \n        \"map\":\"arcgis_world\",\n        \"layers\":\"arcgis_world\",\n        \"format\":\"image/png\"\n    },\n    \"wms\":true\n};\n\nreturn msg;",
+        "func": "msg = {payload:{command:{}}};\nmsg.payload.command.map = {\n    \"name\":\"Esri Sat (SMaRC Cache)\", \n    \"url\":\"http://localhost:1889/mapproxy/service\",\n    \"opt\":{ \n        \"map\":\"arcgis_world\",\n        \"layers\":\"arcgis_world\",\n        \"format\":\"image/png\"\n    },\n    \"wms\":true\n};\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 610,
-        "y": 640,
+        "x": 1050,
+        "y": 820,
         "wires": [
-            [
-                "93d9f503a3372651"
-            ]
+            []
         ]
     },
     {
-        "id": "b6b896db66bb0c3c",
-        "type": "inject",
+        "id": "5f1621f0e468330a",
+        "type": "comment",
         "z": "65c60c3b274f73e3",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 360,
-        "y": 660,
-        "wires": [
-            [
-                "05690f4fe18f582b"
-            ]
-        ]
+        "name": "This is set as the default map, left here for future ref",
+        "info": "",
+        "x": 1130,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "7c2ed1adc789976b",
+        "type": "comment",
+        "z": "65c60c3b274f73e3",
+        "name": "This is routed through the proxy now",
+        "info": "",
+        "x": 1380,
+        "y": 820,
+        "wires": []
     },
     {
         "id": "38311862f50e9a0f",
@@ -8777,8 +8754,7 @@
         "y": 520,
         "wires": [
             [
-                "5d528234543fa099",
-                "8f71be36aa7bd9b9"
+                "5d528234543fa099"
             ]
         ]
     },
@@ -9098,23 +9074,6 @@
             ],
             []
         ]
-    },
-    {
-        "id": "8f71be36aa7bd9b9",
-        "type": "debug",
-        "z": "270280acb5c31a68",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 630,
-        "y": 580,
-        "wires": []
     },
     {
         "id": "e541e1e014a3f70b",
@@ -9875,23 +9834,39 @@
         ]
     },
     {
-        "id": "52216b3dadbe1f72",
-        "type": "ip",
+        "id": "333d9c794d31a2b3",
+        "type": "ui_iframe",
         "z": "2e13c73254d13882",
-        "name": "ip",
-        "https": false,
-        "timeout": "5000",
-        "internalIPv4": true,
-        "internalIPv6": false,
-        "publicIPv4": true,
-        "publicIPv6": false,
-        "x": 250,
-        "y": 540,
+        "group": "58bfc9cc19b0c4cd",
+        "name": "upload plan local",
+        "order": 7,
+        "width": 6,
+        "height": 2,
+        "url": "http://localhost:1880/simple",
+        "origin": "*",
+        "scale": 100,
+        "x": 190,
+        "y": 880,
         "wires": [
-            [
-                "2076ff5c9f6b6736"
-            ]
+            []
         ]
+    },
+    {
+        "id": "9f8d79fbca1c1056",
+        "type": "ui_text",
+        "z": "2e13c73254d13882",
+        "group": "58bfc9cc19b0c4cd",
+        "order": 6,
+        "width": 6,
+        "height": 1,
+        "name": "upload plan txt local",
+        "label": "",
+        "format": "Upload plan to local",
+        "layout": "col-center",
+        "className": "",
+        "x": 200,
+        "y": 840,
+        "wires": []
     },
     {
         "id": "d87950903589a65c",
@@ -9933,46 +9908,30 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 380,
+        "x": 420,
         "y": 540,
         "wires": [
             []
         ]
     },
     {
-        "id": "333d9c794d31a2b3",
-        "type": "ui_iframe",
+        "id": "52216b3dadbe1f72",
+        "type": "ip",
         "z": "2e13c73254d13882",
-        "group": "58bfc9cc19b0c4cd",
-        "name": "upload plan local",
-        "order": 7,
-        "width": 6,
-        "height": 2,
-        "url": "http://localhost:1880/simple",
-        "origin": "*",
-        "scale": 100,
-        "x": 190,
-        "y": 880,
+        "name": "ip",
+        "https": false,
+        "timeout": "5000",
+        "internalIPv4": true,
+        "internalIPv6": false,
+        "publicIPv4": true,
+        "publicIPv6": false,
+        "x": 270,
+        "y": 540,
         "wires": [
-            []
+            [
+                "2076ff5c9f6b6736"
+            ]
         ]
-    },
-    {
-        "id": "9f8d79fbca1c1056",
-        "type": "ui_text",
-        "z": "2e13c73254d13882",
-        "group": "58bfc9cc19b0c4cd",
-        "order": 6,
-        "width": 6,
-        "height": 1,
-        "name": "upload plan txt local",
-        "label": "",
-        "format": "Upload plan to local",
-        "layout": "col-center",
-        "className": "",
-        "x": 200,
-        "y": 840,
-        "wires": []
     },
     {
         "id": "794a330739bf6415",
