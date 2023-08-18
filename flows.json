@@ -1650,23 +1650,6 @@
         "wires": []
     },
     {
-        "id": "61ce2b718be73daf",
-        "type": "function",
-        "z": "65c60c3b274f73e3",
-        "name": "Sweden.map",
-        "func": "msg = {payload:{command:{}}};\nmsg.payload.command.map = {\n    \"overlay\":\"Bathy\", \n    \"url\":\"http://nodered.blue-robots.com/mapserver\",\n    \"opt\":{ \n        \"map\":\"/etc/mapserver/sweden.map\",\n        \"layers\":\"CONTOUR\",\n        \"format\":\"image/png\",\n        \"service\":\"wms\",\n        \"transparent\":true\n    },\n    \"wms\":true\n};\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1450,
-        "y": 780,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "d8ab75012918ab43",
         "type": "ui_worldmap",
         "z": "65c60c3b274f73e3",
@@ -1678,7 +1661,7 @@
         "lat": "58.25089840041283",
         "lon": "11.4500587783608",
         "zoom": "16",
-        "layer": "Custom",
+        "layer": "EsriS",
         "cluster": "",
         "maxage": "",
         "usermenu": "show",
@@ -1693,9 +1676,9 @@
         "path": "/worldmap",
         "overlist": "",
         "maplist": "OSMC,EsriS,EsriT",
-        "mapname": "Esri Sat (SMaRC)",
+        "mapname": "Esri Sat (Local)",
         "mapurl": "http://localhost:1889/mapproxy/service",
-        "mapopt": "{          \"map\":\"arcgis_world\",         \"layers\":\"arcgis_world\",         \"format\":\"image/png\"     }",
+        "mapopt": "{\"map\":\"arcgis_world\",\"layers\":\"arcgis_world\",\"format\":\"image/png\"}",
         "mapwms": true,
         "x": 1260,
         "y": 80,
@@ -1722,7 +1705,8 @@
             "ffc1866d4e5696b6",
             "7ed9aae2048a44f4",
             "09c9a3f142594cee",
-            "8463bb10ce548162"
+            "8463bb10ce548162",
+            "0c109ce581a119d2"
         ],
         "x": 1155,
         "y": 80,
@@ -1741,8 +1725,8 @@
         "links": [
             "1e0bd19ab17b797e"
         ],
-        "x": 785,
-        "y": 800,
+        "x": 695,
+        "y": 920,
         "wires": []
     },
     {
@@ -1849,7 +1833,8 @@
             "d76ba06e630694d5",
             "f60980f36a17939c",
             "fd8f7e829592b528",
-            "a5d4b41045dbb4d2"
+            "a5d4b41045dbb4d2",
+            "fee0c34e30954d84"
         ],
         "x": 435,
         "y": 60,
@@ -1876,12 +1861,11 @@
         "links": [
             "ecb32f1e69ab1244"
         ],
-        "x": 445,
-        "y": 780,
+        "x": 465,
+        "y": 880,
         "wires": [
             [
-                "24bfe69168ea9d8c",
-                "f24fe9111c802e55"
+                "24bfe69168ea9d8c"
             ]
         ]
     },
@@ -1934,8 +1918,8 @@
         "z": "65c60c3b274f73e3",
         "name": "connected",
         "info": "",
-        "x": 360,
-        "y": 780,
+        "x": 380,
+        "y": 880,
         "wires": []
     },
     {
@@ -1946,8 +1930,8 @@
         "links": [
             "acaa0403e6b2f92a"
         ],
-        "x": 305,
-        "y": 820,
+        "x": 325,
+        "y": 920,
         "wires": [
             [
                 "be264f174c773c7e"
@@ -1960,8 +1944,8 @@
         "z": "65c60c3b274f73e3",
         "name": "button",
         "info": "",
-        "x": 230,
-        "y": 820,
+        "x": 250,
+        "y": 920,
         "wires": []
     },
     {
@@ -1970,8 +1954,8 @@
         "z": "65c60c3b274f73e3",
         "name": "map",
         "info": "",
-        "x": 870,
-        "y": 800,
+        "x": 780,
+        "y": 920,
         "wires": []
     },
     {
@@ -1985,8 +1969,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 400,
-        "y": 820,
+        "x": 420,
+        "y": 920,
         "wires": [
             [
                 "24bfe69168ea9d8c"
@@ -2004,8 +1988,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 570,
-        "y": 820,
+        "x": 590,
+        "y": 920,
         "wires": [
             [
                 "93d9f503a3372651"
@@ -3195,59 +3179,199 @@
         ]
     },
     {
-        "id": "f24fe9111c802e55",
-        "type": "function",
-        "z": "65c60c3b274f73e3",
-        "name": "mapproxy swe_bathy",
-        "func": "msg = {payload:{command:{}}};\nmsg.payload.command.map = {\n    \"overlay\":\"Swe Bathy\", \n    \"url\":\"http://localhost:1889/mapproxy/service\",\n    \"opt\":{ \n        \"map\":\"swe_bathy\",\n        \"layers\":\"swe_bathy\",\n        \"format\":\"image/png\",\n        \"transparent\":true\n    },\n    \"wms\":true\n};\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 600,
-        "y": 780,
-        "wires": [
-            [
-                "93d9f503a3372651"
-            ]
-        ]
-    },
-    {
         "id": "05690f4fe18f582b",
         "type": "function",
         "z": "65c60c3b274f73e3",
         "name": "mapproxy arcgis_world",
-        "func": "msg = {payload:{command:{}}};\nmsg.payload.command.map = {\n    \"name\":\"Esri Sat (SMaRC Cache)\", \n    \"url\":\"http://localhost:1889/mapproxy/service\",\n    \"opt\":{ \n        \"map\":\"arcgis_world\",\n        \"layers\":\"arcgis_world\",\n        \"format\":\"image/png\"\n    },\n    \"wms\":true\n};\n\nreturn msg;",
+        "func": "msg = {payload:{command:{}}};\nmsg.payload.command.map = {\n    \"name\":\"Esri Sat (Local)\", \n    \"url\":\"http://localhost:1889/mapproxy/service\",\n    \"opt\":{ \n        \"map\":\"arcgis_world\",\n        \"layers\":\"arcgis_world\",\n        \"format\":\"image/png\"\n    },\n    \"wms\":true\n};\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1050,
-        "y": 820,
+        "x": 950,
+        "y": 780,
         "wires": [
-            []
+            [
+                "0c109ce581a119d2"
+            ]
         ]
     },
     {
-        "id": "5f1621f0e468330a",
+        "id": "b8980cf487b9425c",
+        "type": "function",
+        "z": "65c60c3b274f73e3",
+        "name": "deployment type",
+        "func": "if(msg.payload.publicIPv4 == \"20.240.40.232\"){\n    s = \"cloud\"\n}else{\n    s = \"local\"\n}\nnode.status(s)\nreturn {payload:s}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 720,
+        "wires": [
+            [
+                "85e00684fffec61c",
+                "1e7f435bf98a3ee8"
+            ]
+        ]
+    },
+    {
+        "id": "f14bdad518273b81",
+        "type": "ip",
+        "z": "65c60c3b274f73e3",
+        "name": "ip",
+        "https": false,
+        "timeout": "5000",
+        "internalIPv4": true,
+        "internalIPv6": false,
+        "publicIPv4": true,
+        "publicIPv6": false,
+        "x": 430,
+        "y": 720,
+        "wires": [
+            [
+                "b8980cf487b9425c"
+            ]
+        ]
+    },
+    {
+        "id": "85e00684fffec61c",
+        "type": "switch",
+        "z": "65c60c3b274f73e3",
+        "name": "is cloud",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "cloud",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 740,
+        "y": 700,
+        "wires": [
+            [
+                "5b2eb2e8293d53e9"
+            ]
+        ]
+    },
+    {
+        "id": "1e7f435bf98a3ee8",
+        "type": "switch",
+        "z": "65c60c3b274f73e3",
+        "name": "is local",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "local",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 730,
+        "y": 740,
+        "wires": [
+            [
+                "2259d318ecb44061",
+                "05690f4fe18f582b"
+            ]
+        ]
+    },
+    {
+        "id": "2259d318ecb44061",
+        "type": "function",
+        "z": "65c60c3b274f73e3",
+        "name": "mapproxy swe_bathy",
+        "func": "msg = {payload:{command:{}}};\nmsg.payload.command.map = {\n    \"overlay\":\"Swe Bathy (Local)\", \n    \"url\":\"http://localhost:1889/mapproxy/service\",\n    \"opt\":{ \n        \"map\":\"swe_bathy\",\n        \"layers\":\"swe_bathy\",\n        \"format\":\"image/png\",\n        \"transparent\":true\n    },\n    \"wms\":true\n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 740,
+        "wires": [
+            [
+                "0c109ce581a119d2"
+            ]
+        ]
+    },
+    {
+        "id": "5b2eb2e8293d53e9",
+        "type": "function",
+        "z": "65c60c3b274f73e3",
+        "name": "Sweden.map",
+        "func": "msg = {payload:{command:{}}};\nmsg.payload.command.map = {\n    \"overlay\":\"Swe Bathy\", \n    \"url\":\"http://nodered.blue-robots.com/mapserver\",\n    \"opt\":{ \n        \"map\":\"/etc/mapserver/sweden.map\",\n        \"layers\":\"CONTOUR\",\n        \"format\":\"image/png\",\n        \"service\":\"wms\",\n        \"transparent\":true\n    },\n    \"wms\":true\n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 700,
+        "wires": [
+            [
+                "0c109ce581a119d2"
+            ]
+        ]
+    },
+    {
+        "id": "fee0c34e30954d84",
+        "type": "link in",
+        "z": "65c60c3b274f73e3",
+        "name": "v2_map_to_map_setup",
+        "links": [
+            "ecb32f1e69ab1244"
+        ],
+        "x": 335,
+        "y": 720,
+        "wires": [
+            [
+                "f14bdad518273b81"
+            ]
+        ]
+    },
+    {
+        "id": "a57fe83f2a33e7b4",
         "type": "comment",
         "z": "65c60c3b274f73e3",
-        "name": "This is set as the default map, left here for future ref",
+        "name": "connected",
         "info": "",
-        "x": 1130,
-        "y": 780,
+        "x": 250,
+        "y": 720,
         "wires": []
     },
     {
-        "id": "7c2ed1adc789976b",
+        "id": "0c109ce581a119d2",
+        "type": "link out",
+        "z": "65c60c3b274f73e3",
+        "name": "v2_map_from_map_setup",
+        "mode": "link",
+        "links": [
+            "1e0bd19ab17b797e"
+        ],
+        "x": 1215,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "e3d0deda7e848763",
         "type": "comment",
         "z": "65c60c3b274f73e3",
-        "name": "This is routed through the proxy now",
+        "name": "map",
         "info": "",
-        "x": 1380,
-        "y": 820,
+        "x": 1300,
+        "y": 740,
         "wires": []
     },
     {
