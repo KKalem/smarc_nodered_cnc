@@ -3315,7 +3315,7 @@
         "type": "function",
         "z": "65c60c3b274f73e3",
         "name": "worldmap url",
-        "func": "if(msg.payload == \"cloud\"){\n    url = \"nodered.blue-robots.com\"\n}else if (msg.payload == \"local\"){\n    url = \"localhost:1889\"\n}\nt = \"http://\" + url + \"/worldmap/\"\nnode.status(t)\nreturn {payload:t}",
+        "func": "if(msg.payload == \"cloud\"){\n    url = \"nodered.blue-robots.com\"\n}else if (msg.payload == \"local\"){\n    url = \"localhost:1880\"\n}\nt = \"http://\" + url + \"/worldmap/\"\nnode.status(t)\nreturn {payload:t}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -9188,7 +9188,7 @@
         "type": "function",
         "z": "270280acb5c31a68",
         "name": "nodered url",
-        "func": "if(msg.payload == \"cloud\"){\n    url = \"https://nodered.blue-robots.com/linechart\"\n}else if (msg.payload == \"local\"){\n    url = \"localhost:1881/linechart\"\n}\nnode.status(url)\nreturn {url:url}",
+        "func": "if(msg.payload == \"cloud\"){\n    url = \"https://nodered.blue-robots.com/linechart\"\n}else if (msg.payload == \"local\"){\n    url = \"localhost:1880/linechart\"\n}\nnode.status(url)\nreturn {url:url}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -9292,11 +9292,11 @@
         "type": "http in",
         "z": "2e13c73254d13882",
         "name": "",
-        "url": "/static/:fn",
+        "url": "/static/plans/:fn",
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 210,
+        "x": 190,
         "y": 420,
         "wires": [
             [
@@ -9359,15 +9359,15 @@
         "z": "2e13c73254d13882",
         "name": "",
         "scope": [
-            "393192e8bb3f5f3f",
+            "e541e1e014a3f70b",
+            "c1acdb4788e23a2d",
+            "41a30cbdcaa40b6a",
+            "a37fad622dd70215",
+            "364dd932664bf737",
+            "dba2d6b363cfbe9b",
             "6cf5798f518ec33c",
             "4c6ca4a3460c233a",
-            "dba2d6b363cfbe9b",
-            "364dd932664bf737",
-            "c1acdb4788e23a2d",
-            "a37fad622dd70215",
-            "e541e1e014a3f70b",
-            "41a30cbdcaa40b6a"
+            "393192e8bb3f5f3f"
         ],
         "uncaught": false,
         "x": 550,
@@ -9696,14 +9696,14 @@
         "height": 1,
         "name": "download plan",
         "label": "",
-        "format": "<a target=\"_blank\" href=\"https://nodered.blue-robots.com/static/{{msg.payload}}.csv\">Download plan</a> ",
+        "format": "<a target=\"_blank\" href=\"{{msg.url}}\">Download plan</a> ",
         "layout": "col-center",
         "className": "",
         "style": false,
         "font": "",
         "fontSize": "",
         "color": "#000000",
-        "x": 420,
+        "x": 500,
         "y": 240,
         "wires": []
     },
@@ -9754,10 +9754,14 @@
         "height": 0,
         "name": "download track",
         "label": "",
-        "format": "<a target=\"_blank\" href=\"https://nodered.blue-robots.com/static/{{msg.payload}}.json\">Download track</a> ",
+        "format": "<a target=\"_blank\" href=\"{{msg.url}}\">Download track</a> ",
         "layout": "col-center",
         "className": "",
-        "x": 380,
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 540,
         "y": 1420,
         "wires": []
     },
@@ -9769,23 +9773,13 @@
         "links": [
             "8ed7c0d75e2bcd8b"
         ],
-        "x": 265,
+        "x": 185,
         "y": 1420,
         "wires": [
             [
-                "721e8d283bc2c07f"
+                "642534aa982deef7"
             ]
         ]
-    },
-    {
-        "id": "bbf250ddc139d8c2",
-        "type": "comment",
-        "z": "2e13c73254d13882",
-        "name": "download track",
-        "info": "",
-        "x": 320,
-        "y": 1380,
-        "wires": []
     },
     {
         "id": "8bd8df7d765146a7",
@@ -9799,7 +9793,7 @@
         "finalize": "",
         "libs": [],
         "x": 330,
-        "y": 1540,
+        "y": 1660,
         "wires": [
             [
                 "b63b6e1f8450e64b"
@@ -9823,7 +9817,7 @@
         "overwriteFile": "true",
         "encoding": "none",
         "x": 500,
-        "y": 1500,
+        "y": 1620,
         "wires": [
             []
         ]
@@ -9833,12 +9827,12 @@
         "type": "http in",
         "z": "2e13c73254d13882",
         "name": "",
-        "url": "/static/:fn",
+        "url": "/static/tracks/:fn",
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 170,
-        "y": 1540,
+        "x": 150,
+        "y": 1660,
         "wires": [
             [
                 "8bd8df7d765146a7"
@@ -9853,7 +9847,7 @@
         "statusCode": "",
         "headers": {},
         "x": 810,
-        "y": 1580,
+        "y": 1700,
         "wires": []
     },
     {
@@ -9868,7 +9862,7 @@
         "encoding": "none",
         "allProps": false,
         "x": 660,
-        "y": 1540,
+        "y": 1660,
         "wires": [
             [
                 "535c370d20467ae1"
@@ -9887,7 +9881,7 @@
         "finalize": "",
         "libs": [],
         "x": 660,
-        "y": 1600,
+        "y": 1720,
         "wires": [
             [
                 "535c370d20467ae1"
@@ -9908,10 +9902,11 @@
         ],
         "uncaught": false,
         "x": 510,
-        "y": 1620,
+        "y": 1740,
         "wires": [
             [
-                "745d7943eb94d390"
+                "745d7943eb94d390",
+                "f2e47e7e5e301fb5"
             ]
         ]
     },
@@ -9933,7 +9928,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 510,
-        "y": 1540,
+        "y": 1660,
         "wires": [
             [
                 "c729e083d5310c8d"
@@ -9947,7 +9942,7 @@
         "name": "saves a file, then downloads it as track.json",
         "info": "",
         "x": 240,
-        "y": 1480,
+        "y": 1600,
         "wires": []
     },
     {
@@ -9968,7 +9963,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 510,
-        "y": 1580,
+        "y": 1700,
         "wires": [
             [
                 "535c370d20467ae1"
@@ -10017,13 +10012,13 @@
         "type": "function",
         "z": "2e13c73254d13882",
         "name": "set url",
-        "func": "if(msg.topic == 'deployment_type'){\n    if(msg.payload == \"local\"){\n        u = 'http://localhost:1880'\n        \n    }else if(msg.payload == \"cloud\"){\n        u = 'https://nodered.blue-robots.com'\n    }\n    flow.set('url', u)\n    node.status('deploy '+u)\n    return\n}else{\n    url = \"https://\"+flow.get('url')+\"/static/\"+msg.payload+\".csv\"\n    node.status('url '+url)\n    return {url:url}\n}\n\n",
+        "func": "if(msg.topic == 'deployment_type'){\n    if(msg.payload == \"local\"){\n        u = 'http://localhost:1880'\n        \n    }else if(msg.payload == \"cloud\"){\n        u = 'https://nodered.blue-robots.com'\n    }else{\n        node.warn(msg.payload)\n    }\n    flow.set('url', u)\n    node.status('deploy '+u)\n    return\n}else if(msg.topic == \"worldmap\"){\n    return  \n}else{\n    url = flow.get('url')+\"/static/plans/\"+msg.payload+\".csv\"\n    node.status('url '+url)\n    return {url:url}\n}\n\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 250,
+        "x": 350,
         "y": 240,
         "wires": [
             [
@@ -10036,7 +10031,7 @@
         "type": "function",
         "z": "2e13c73254d13882",
         "name": "nodered url",
-        "func": "if(msg.payload == \"cloud\"){\n    url = \"https://nodered.blue-robots.com/simple\"\n}else if (msg.payload == \"local\"){\n    url = \"localhost:1880/simple\"\n}\nnode.status(url)\nreturn {url:url, text:msg.payload}",
+        "func": "if(msg.payload == \"cloud\"){\n    url = \"https://nodered.blue-robots.com/simple\"\n}else if (msg.payload == \"local\"){\n    url = \"http://localhost:1880/simple\"\n}\nnode.status(url)\nreturn {url:url, text:msg.payload}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -10075,6 +10070,104 @@
         "info": "",
         "x": 190,
         "y": 980,
+        "wires": []
+    },
+    {
+        "id": "2648acabeaadf850",
+        "type": "link in",
+        "z": "2e13c73254d13882",
+        "name": "",
+        "links": [
+            "92be54cab625c80f"
+        ],
+        "x": 225,
+        "y": 280,
+        "wires": [
+            [
+                "4c721b7968edea27"
+            ]
+        ]
+    },
+    {
+        "id": "16348ee11ddee788",
+        "type": "comment",
+        "z": "2e13c73254d13882",
+        "name": "cloud or local",
+        "info": "",
+        "x": 130,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "4442eb265951fbfe",
+        "type": "comment",
+        "z": "2e13c73254d13882",
+        "name": "cloud or local",
+        "info": "",
+        "x": 150,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "4683a551857ab675",
+        "type": "link in",
+        "z": "2e13c73254d13882",
+        "name": "",
+        "links": [
+            "92be54cab625c80f"
+        ],
+        "x": 245,
+        "y": 1460,
+        "wires": [
+            [
+                "642534aa982deef7"
+            ]
+        ]
+    },
+    {
+        "id": "642534aa982deef7",
+        "type": "function",
+        "z": "2e13c73254d13882",
+        "name": "set url",
+        "func": "if(msg.topic == 'deployment_type'){\n    if(msg.payload == \"local\"){\n        u = 'http://localhost:1880'\n        \n    }else if(msg.payload == \"cloud\"){\n        u = 'https://nodered.blue-robots.com'\n    }else{\n        node.warn(msg.payload)\n    }\n    flow.set('url', u)\n    node.status('deploy '+u)\n    return\n}else if(msg.topic == \"worldmap\"){\n    return  \n}else{\n    url = flow.get('url')+\"/static/tracks/\"+msg.payload+\".json\"\n    node.status('url '+url)\n    return {url:url}\n}\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 1420,
+        "wires": [
+            [
+                "721e8d283bc2c07f"
+            ]
+        ]
+    },
+    {
+        "id": "c26814d38c6c6736",
+        "type": "comment",
+        "z": "2e13c73254d13882",
+        "name": "download track",
+        "info": "",
+        "x": 240,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "f2e47e7e5e301fb5",
+        "type": "debug",
+        "z": "2e13c73254d13882",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 650,
+        "y": 1760,
         "wires": []
     },
     {
@@ -10205,7 +10298,9 @@
             "513746a0acb84126",
             "12d90d1b85b7f51e",
             "f8cf73174a4c1a61",
-            "c470ad64ba2e46ad"
+            "c470ad64ba2e46ad",
+            "2648acabeaadf850",
+            "4683a551857ab675"
         ],
         "x": 665,
         "y": 500,
