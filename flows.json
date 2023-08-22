@@ -219,7 +219,7 @@
         "order": 1,
         "disp": true,
         "width": "6",
-        "collapse": true,
+        "collapse": false,
         "className": ""
     },
     {
@@ -260,7 +260,7 @@
         "order": 2,
         "disp": true,
         "width": "18",
-        "collapse": true,
+        "collapse": false,
         "className": ""
     },
     {
@@ -473,6 +473,24 @@
         "order": 5,
         "width": 6,
         "height": 1
+    },
+    {
+        "id": "4288cd38.5e0304",
+        "type": "ui_group",
+        "name": "IFrame01",
+        "tab": "2d9c4ef6.b97082",
+        "order": 1,
+        "disp": true,
+        "width": "20",
+        "collapse": false
+    },
+    {
+        "id": "2d9c4ef6.b97082",
+        "type": "ui_tab",
+        "name": "IFrame01",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
     },
     {
         "id": "a04b59e608979f6a",
@@ -1706,7 +1724,8 @@
             "7ed9aae2048a44f4",
             "09c9a3f142594cee",
             "8463bb10ce548162",
-            "0c109ce581a119d2"
+            "0c109ce581a119d2",
+            "88448349dab313c4"
         ],
         "x": 1155,
         "y": 80,
@@ -1726,7 +1745,7 @@
             "1e0bd19ab17b797e"
         ],
         "x": 695,
-        "y": 920,
+        "y": 1000,
         "wires": []
     },
     {
@@ -1834,7 +1853,8 @@
             "f60980f36a17939c",
             "fd8f7e829592b528",
             "a5d4b41045dbb4d2",
-            "fee0c34e30954d84"
+            "fee0c34e30954d84",
+            "e187b7ec19cac054"
         ],
         "x": 435,
         "y": 60,
@@ -1862,7 +1882,7 @@
             "ecb32f1e69ab1244"
         ],
         "x": 465,
-        "y": 880,
+        "y": 960,
         "wires": [
             [
                 "24bfe69168ea9d8c"
@@ -1919,7 +1939,7 @@
         "name": "connected",
         "info": "",
         "x": 380,
-        "y": 880,
+        "y": 960,
         "wires": []
     },
     {
@@ -1931,7 +1951,7 @@
             "acaa0403e6b2f92a"
         ],
         "x": 325,
-        "y": 920,
+        "y": 1000,
         "wires": [
             [
                 "be264f174c773c7e"
@@ -1945,7 +1965,7 @@
         "name": "button",
         "info": "",
         "x": 250,
-        "y": 920,
+        "y": 1000,
         "wires": []
     },
     {
@@ -1955,7 +1975,7 @@
         "name": "map",
         "info": "",
         "x": 780,
-        "y": 920,
+        "y": 1000,
         "wires": []
     },
     {
@@ -1970,7 +1990,7 @@
         "finalize": "",
         "libs": [],
         "x": 420,
-        "y": 920,
+        "y": 1000,
         "wires": [
             [
                 "24bfe69168ea9d8c"
@@ -1989,7 +2009,7 @@
         "finalize": "",
         "libs": [],
         "x": 590,
-        "y": 920,
+        "y": 1000,
         "wires": [
             [
                 "93d9f503a3372651"
@@ -2008,7 +2028,7 @@
         "finalize": "",
         "libs": [],
         "x": 520,
-        "y": 460,
+        "y": 480,
         "wires": [
             [
                 "3910098f87fb5eac"
@@ -2037,7 +2057,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 250,
-        "y": 480,
+        "y": 500,
         "wires": [
             [
                 "0a961438ad73e32f",
@@ -2057,7 +2077,7 @@
         "finalize": "",
         "libs": [],
         "x": 510,
-        "y": 500,
+        "y": 520,
         "wires": [
             [
                 "3910098f87fb5eac"
@@ -2076,7 +2096,7 @@
         "finalize": "",
         "libs": [],
         "x": 460,
-        "y": 540,
+        "y": 560,
         "wires": [
             [
                 "3910098f87fb5eac"
@@ -2105,7 +2125,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 250,
-        "y": 540,
+        "y": 560,
         "wires": [
             [
                 "84763f6e6162102a"
@@ -2139,7 +2159,7 @@
         "animate": false,
         "className": "",
         "x": 520,
-        "y": 1040,
+        "y": 1200,
         "wires": [
             [
                 "d01a1c27b3eb717f",
@@ -2160,7 +2180,7 @@
         "finalize": "",
         "libs": [],
         "x": 730,
-        "y": 1040,
+        "y": 1200,
         "wires": [
             [
                 "7e03fe39a9e4785c"
@@ -2200,7 +2220,7 @@
             "ecb32f1e69ab1244"
         ],
         "x": 285,
-        "y": 1040,
+        "y": 1200,
         "wires": [
             [
                 "84dfa6ecdba12005"
@@ -2214,7 +2234,7 @@
         "name": "connected",
         "info": "",
         "x": 200,
-        "y": 1040,
+        "y": 1200,
         "wires": []
     },
     {
@@ -2237,7 +2257,7 @@
         "to": "",
         "reg": false,
         "x": 370,
-        "y": 1040,
+        "y": 1200,
         "wires": [
             [
                 "87855a030ad4b56e"
@@ -2264,7 +2284,7 @@
         "to": "",
         "reg": false,
         "x": 760,
-        "y": 1080,
+        "y": 1240,
         "wires": [
             [
                 "836e9b2d666ea992"
@@ -2283,7 +2303,7 @@
         "finalize": "",
         "libs": [],
         "x": 770,
-        "y": 1240,
+        "y": 1440,
         "wires": [
             [
                 "c7d4d5de96d19781",
@@ -2325,7 +2345,7 @@
             "338233d5c53202af"
         ],
         "x": 205,
-        "y": 1220,
+        "y": 1420,
         "wires": [
             [
                 "8e14da82f369a630"
@@ -2339,7 +2359,7 @@
         "name": "update_markers_on_map",
         "info": "",
         "x": 190,
-        "y": 1260,
+        "y": 1460,
         "wires": []
     },
     {
@@ -2349,7 +2369,7 @@
         "name": "update_markers_on_map",
         "info": "",
         "x": 1050,
-        "y": 1080,
+        "y": 1240,
         "wires": []
     },
     {
@@ -2362,7 +2382,7 @@
             "bb3002ce85983e34"
         ],
         "x": 915,
-        "y": 1080,
+        "y": 1240,
         "wires": []
     },
     {
@@ -2377,7 +2397,7 @@
         "finalize": "",
         "libs": [],
         "x": 510,
-        "y": 1220,
+        "y": 1420,
         "wires": [
             [
                 "c7d4d5de96d19781"
@@ -2402,7 +2422,7 @@
         "finalize": "",
         "libs": [],
         "x": 710,
-        "y": 1280,
+        "y": 1480,
         "wires": [
             [
                 "c7d4d5de96d19781",
@@ -2445,7 +2465,7 @@
         "finalize": "",
         "libs": [],
         "x": 480,
-        "y": 580,
+        "y": 600,
         "wires": [
             [
                 "3910098f87fb5eac"
@@ -2474,7 +2494,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 260,
-        "y": 580,
+        "y": 600,
         "wires": [
             [
                 "d974149e3e68ba63"
@@ -2490,7 +2510,7 @@
             "ecb32f1e69ab1244"
         ],
         "x": 375,
-        "y": 1180,
+        "y": 1380,
         "wires": [
             [
                 "d2f284617e677636"
@@ -2504,7 +2524,7 @@
         "name": "connected",
         "info": "",
         "x": 280,
-        "y": 1180,
+        "y": 1380,
         "wires": []
     },
     {
@@ -2516,8 +2536,8 @@
         "links": [
             "1e0bd19ab17b797e"
         ],
-        "x": 655,
-        "y": 480,
+        "x": 645,
+        "y": 540,
         "wires": []
     },
     {
@@ -2526,8 +2546,8 @@
         "z": "65c60c3b274f73e3",
         "name": "map",
         "info": "",
-        "x": 730,
-        "y": 480,
+        "x": 720,
+        "y": 540,
         "wires": []
     },
     {
@@ -2540,7 +2560,7 @@
             "1e0bd19ab17b797e"
         ],
         "x": 1145,
-        "y": 1220,
+        "y": 1420,
         "wires": []
     },
     {
@@ -2550,7 +2570,7 @@
         "name": "map",
         "info": "",
         "x": 1220,
-        "y": 1220,
+        "y": 1420,
         "wires": []
     },
     {
@@ -2565,7 +2585,7 @@
         "finalize": "",
         "libs": [],
         "x": 1250,
-        "y": 1300,
+        "y": 1500,
         "wires": [
             []
         ]
@@ -2580,7 +2600,7 @@
             "1e0bd19ab17b797e"
         ],
         "x": 915,
-        "y": 1040,
+        "y": 1200,
         "wires": []
     },
     {
@@ -2590,7 +2610,7 @@
         "name": "map",
         "info": "",
         "x": 990,
-        "y": 1040,
+        "y": 1200,
         "wires": []
     },
     {
@@ -2605,7 +2625,7 @@
         "finalize": "",
         "libs": [],
         "x": 710,
-        "y": 1320,
+        "y": 1520,
         "wires": [
             [
                 "c7d4d5de96d19781",
@@ -2623,7 +2643,7 @@
             "064286a6a174b304"
         ],
         "x": 405,
-        "y": 1000,
+        "y": 1160,
         "wires": [
             [
                 "87855a030ad4b56e"
@@ -2637,7 +2657,7 @@
         "name": "toggle planning mode toggle",
         "info": "",
         "x": 260,
-        "y": 1000,
+        "y": 1160,
         "wires": []
     },
     {
@@ -2652,7 +2672,7 @@
         "finalize": "",
         "libs": [],
         "x": 920,
-        "y": 1340,
+        "y": 1540,
         "wires": [
             [
                 "c7d4d5de96d19781",
@@ -2672,7 +2692,7 @@
         "finalize": "",
         "libs": [],
         "x": 920,
-        "y": 1380,
+        "y": 1580,
         "wires": [
             [
                 "d443219a2ff95383",
@@ -2692,7 +2712,7 @@
         "finalize": "",
         "libs": [],
         "x": 720,
-        "y": 1360,
+        "y": 1560,
         "wires": [
             [
                 "2eee1d2a8a2e7b36",
@@ -2711,7 +2731,7 @@
             "5258271b9369afd2"
         ],
         "x": 655,
-        "y": 1000,
+        "y": 1160,
         "wires": []
     },
     {
@@ -2721,7 +2741,7 @@
         "name": "compare gui and robot plans",
         "info": "",
         "x": 900,
-        "y": 1000,
+        "y": 1160,
         "wires": []
     },
     {
@@ -2742,7 +2762,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 320,
-        "y": 1220,
+        "y": 1420,
         "wires": [
             [
                 "d2f284617e677636"
@@ -2758,12 +2778,16 @@
         "width": 4,
         "height": 1,
         "name": "map in a tab",
-        "label": "<a target=\"_blank\" href=\"https://nodered.blue-robots.com/worldmap\">Map in a tab</a> ",
+        "label": "<a target=\"_blank\" href=\"{{msg.payload}}\">Map in a tab</a> ",
         "format": "",
         "layout": "row-right",
         "className": "",
-        "x": 1250,
-        "y": 40,
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 630,
+        "y": 820,
         "wires": []
     },
     {
@@ -2909,7 +2933,7 @@
         "y": 340,
         "wires": [
             [
-                "3910098f87fb5eac"
+                "88448349dab313c4"
             ]
         ]
     },
@@ -3179,161 +3203,6 @@
         ]
     },
     {
-        "id": "05690f4fe18f582b",
-        "type": "function",
-        "z": "65c60c3b274f73e3",
-        "name": "localhost/mapproxy/arcgis_world",
-        "func": "msg = {payload:{command:{}}};\nmsg.payload.command.map = {\n    \"name\":\"Esri Sat (Cached)\", \n    \"url\":\"http://localhost:1889/mapproxy/service\",\n    \"opt\":{ \n        \"map\":\"arcgis_world\",\n        \"layers\":\"arcgis_world\",\n        \"format\":\"image/png\"\n    },\n    \"wms\":true\n};\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 970,
-        "y": 780,
-        "wires": [
-            [
-                "0c109ce581a119d2"
-            ]
-        ]
-    },
-    {
-        "id": "b8980cf487b9425c",
-        "type": "function",
-        "z": "65c60c3b274f73e3",
-        "name": "deployment type",
-        "func": "if(msg.payload.publicIPv4 == \"20.240.40.232\"){\n    s = \"cloud\"\n}else{\n    s = \"local\"\n}\nnode.status(s)\nreturn {payload:s}",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 580,
-        "y": 720,
-        "wires": [
-            [
-                "85e00684fffec61c",
-                "1e7f435bf98a3ee8"
-            ]
-        ]
-    },
-    {
-        "id": "f14bdad518273b81",
-        "type": "ip",
-        "z": "65c60c3b274f73e3",
-        "name": "ip",
-        "https": false,
-        "timeout": "5000",
-        "internalIPv4": true,
-        "internalIPv6": false,
-        "publicIPv4": true,
-        "publicIPv6": false,
-        "x": 430,
-        "y": 720,
-        "wires": [
-            [
-                "b8980cf487b9425c"
-            ]
-        ]
-    },
-    {
-        "id": "85e00684fffec61c",
-        "type": "switch",
-        "z": "65c60c3b274f73e3",
-        "name": "is cloud",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "cloud",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 740,
-        "y": 700,
-        "wires": [
-            [
-                "721255d7a58f78fe",
-                "12c37e0bb25bb6c7"
-            ]
-        ]
-    },
-    {
-        "id": "1e7f435bf98a3ee8",
-        "type": "switch",
-        "z": "65c60c3b274f73e3",
-        "name": "is local",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "local",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 730,
-        "y": 740,
-        "wires": [
-            [
-                "2259d318ecb44061",
-                "05690f4fe18f582b"
-            ]
-        ]
-    },
-    {
-        "id": "2259d318ecb44061",
-        "type": "function",
-        "z": "65c60c3b274f73e3",
-        "name": "localhost/mapproxy/swe_bathy",
-        "func": "msg = {payload:{command:{}}};\nmsg.payload.command.map = {\n    \"overlay\":\"Swe Bathy (Cached)\", \n    \"url\":\"http://localhost:1889/mapproxy/service\",\n    \"opt\":{ \n        \"map\":\"swe_bathy\",\n        \"layers\":\"swe_bathy\",\n        \"format\":\"image/png\",\n        \"transparent\":true\n    },\n    \"wms\":true\n};\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 970,
-        "y": 740,
-        "wires": [
-            [
-                "0c109ce581a119d2"
-            ]
-        ]
-    },
-    {
-        "id": "fee0c34e30954d84",
-        "type": "link in",
-        "z": "65c60c3b274f73e3",
-        "name": "v2_map_to_map_setup",
-        "links": [
-            "ecb32f1e69ab1244"
-        ],
-        "x": 335,
-        "y": 720,
-        "wires": [
-            [
-                "f14bdad518273b81"
-            ]
-        ]
-    },
-    {
-        "id": "a57fe83f2a33e7b4",
-        "type": "comment",
-        "z": "65c60c3b274f73e3",
-        "name": "connected",
-        "info": "",
-        "x": 250,
-        "y": 720,
-        "wires": []
-    },
-    {
         "id": "0c109ce581a119d2",
         "type": "link out",
         "z": "65c60c3b274f73e3",
@@ -3342,7 +3211,7 @@
         "links": [
             "1e0bd19ab17b797e"
         ],
-        "x": 1215,
+        "x": 845,
         "y": 740,
         "wires": []
     },
@@ -3352,23 +3221,70 @@
         "z": "65c60c3b274f73e3",
         "name": "map",
         "info": "",
-        "x": 1300,
+        "x": 930,
         "y": 740,
         "wires": []
     },
     {
-        "id": "721255d7a58f78fe",
+        "id": "68d602457e0bc822",
         "type": "function",
         "z": "65c60c3b274f73e3",
-        "name": ".com/mapproxy/swe_bathy",
-        "func": "msg = {payload:{command:{}}};\nmsg.payload.command.map = {\n    \"overlay\":\"Swe Bathy (Cached)\", \n    \"url\":\"http://nodered.blue-robots.com/mapproxy/service/\",\n    \"opt\":{ \n        \"map\":\"swe_bathy\",\n        \"layers\":\"swe_bathy\",\n        \"format\":\"image/png\",\n        \"transparent\":true\n    },\n    \"wms\":true\n};\n\nreturn msg;",
+        "name": "mapproxy url",
+        "func": "if(msg.payload == \"cloud\"){\n    url = \"nodered.blue-robots.com\"\n}else if (msg.payload == \"local\"){\n    url = \"localhost:1889\"\n}\nt = \"http://\" + url + \"/mapproxy/service/\"\nnode.status(t)\nreturn {payload:t}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 960,
-        "y": 660,
+        "x": 430,
+        "y": 740,
+        "wires": [
+            [
+                "e94f0c3160fd5f50",
+                "0ceca9b8453d5332"
+            ]
+        ]
+    },
+    {
+        "id": "5d5415816eb0390c",
+        "type": "link in",
+        "z": "65c60c3b274f73e3",
+        "name": "",
+        "links": [
+            "92be54cab625c80f"
+        ],
+        "x": 295,
+        "y": 780,
+        "wires": [
+            [
+                "68d602457e0bc822",
+                "964e95040e4297cf"
+            ]
+        ]
+    },
+    {
+        "id": "f2d052620d4c8111",
+        "type": "comment",
+        "z": "65c60c3b274f73e3",
+        "name": "cloud or local",
+        "info": "",
+        "x": 210,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "e94f0c3160fd5f50",
+        "type": "function",
+        "z": "65c60c3b274f73e3",
+        "name": "url/mapproxy/swe_bathy",
+        "func": "ret = {payload:{command:{}}};\nret.payload.command.map = {\n    \"overlay\":\"Swe Bathy (Cached)\", \n    \"url\":msg.payload,\n    \"opt\":{ \n        \"map\":\"swe_bathy\",\n        \"layers\":\"swe_bathy\",\n        \"format\":\"image/png\",\n        \"transparent\":true\n    },\n    \"wms\":true\n};\n\nreturn ret;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 720,
         "wires": [
             [
                 "0c109ce581a119d2"
@@ -3376,23 +3292,65 @@
         ]
     },
     {
-        "id": "12c37e0bb25bb6c7",
+        "id": "0ceca9b8453d5332",
         "type": "function",
         "z": "65c60c3b274f73e3",
-        "name": ".com/mapproxy/arcgis_world",
-        "func": "msg = {payload:{command:{}}};\nmsg.payload.command.map = {\n    \"name\":\"Esri Sat (Cached)\", \n    \"url\":\"http://nodered.blue-robots.com/mapproxy/service/\",\n    \"opt\":{ \n        \"map\":\"arcgis_world\",\n        \"layers\":\"arcgis_world\",\n        \"format\":\"image/png\"\n    },\n    \"wms\":true\n};\n\nreturn msg;",
+        "name": "url/mapproxy/arcgis_world",
+        "func": "ret = {payload:{command:{}}};\nret.payload.command.map = {\n    \"name\":\"Esri Sat (Cached)\", \n    \"url\":msg.payload,\n    \"opt\":{ \n        \"map\":\"arcgis_world\",\n        \"layers\":\"arcgis_world\",\n        \"format\":\"image/png\"\n    },\n    \"wms\":true\n};\n\nreturn ret;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 960,
-        "y": 700,
+        "x": 670,
+        "y": 760,
         "wires": [
             [
                 "0c109ce581a119d2"
             ]
         ]
+    },
+    {
+        "id": "964e95040e4297cf",
+        "type": "function",
+        "z": "65c60c3b274f73e3",
+        "name": "worldmap url",
+        "func": "if(msg.payload == \"cloud\"){\n    url = \"nodered.blue-robots.com\"\n}else if (msg.payload == \"local\"){\n    url = \"localhost:1889\"\n}\nt = \"http://\" + url + \"/worldmap/\"\nnode.status(t)\nreturn {payload:t}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 820,
+        "wires": [
+            [
+                "6bad9b25f08b2b75"
+            ]
+        ]
+    },
+    {
+        "id": "88448349dab313c4",
+        "type": "link out",
+        "z": "65c60c3b274f73e3",
+        "name": "v2_map_from_map_setup",
+        "mode": "link",
+        "links": [
+            "1e0bd19ab17b797e"
+        ],
+        "x": 645,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "25a4a018507d0c2a",
+        "type": "comment",
+        "z": "65c60c3b274f73e3",
+        "name": "map",
+        "info": "",
+        "x": 720,
+        "y": 340,
+        "wires": []
     },
     {
         "id": "38311862f50e9a0f",
@@ -8683,13 +8641,15 @@
         "order": 2,
         "width": 12,
         "height": 10,
-        "url": "https://nodered.blue-robots.com/linechart",
+        "url": "",
         "origin": "*",
         "scale": "70",
-        "x": 200,
-        "y": 160,
+        "x": 620,
+        "y": 660,
         "wires": [
-            []
+            [
+                "f612554a052fde61"
+            ]
         ]
     },
     {
@@ -8697,7 +8657,7 @@
         "type": "function",
         "z": "270280acb5c31a68",
         "name": "List track properties",
-        "func": "tracks = global.get(\"planning.tracks\")\nif(!tracks) return\n\nstn = global.get(\"gui.selected_track_name\")\nif(!stn) return\n\ntrack = tracks[stn]\nif(!track) return\n\nif(track.data.length < 1) return\n\nfirst = track.data[0]\nlast = track.data[track.data.length-1]\n\nt0 = first[0]\ntf = last[0]\n\n// title - title of the item,\n// description - description of the item. Optional if line type is Single-line or action type is menu,\n// menu - list of menu items (optional),\n// icon - URL of icon (optional),\n// icon_name - font icon name (optional).\n// icon_unicode - alternative to icon name - uses text characters (optional).\n// isChecked \n\ncharted_keys = global.get(\"gui.charted_keys\") || new Set()\nkeys = global.get(\"planning.track_columns\")\nitems = []\nfor(const key_i in keys){\n    sample = first[key_i]\n    key = keys[key_i]\n    if (typeof sample === 'string' || sample instanceof String) continue\n    item = {\n        title:key,\n        isChecked: charted_keys.has(key)\n    }\n    items.push(item)\n}\n\n\nreturn [\n    {payload:items},\n    {ui_control:{max:tf-t0}}\n]",
+        "func": "tracks = global.get(\"planning.tracks\")\nif(!tracks) return\n\nstn = global.get(\"gui.selected_track_name\")\nif(!stn) return\n\ntrack = tracks[stn]\nif(!track) return\n\nif(track.data.length < 1) return\n\nfirst = track.data[0]\nlast = track.data[track.data.length-1]\n\nt0 = first[0]/1000\ntf = last[0]/1000\n\n// title - title of the item,\n// description - description of the item. Optional if line type is Single-line or action type is menu,\n// menu - list of menu items (optional),\n// icon - URL of icon (optional),\n// icon_name - font icon name (optional).\n// icon_unicode - alternative to icon name - uses text characters (optional).\n// isChecked \n\ncharted_keys = global.get(\"gui.charted_keys\") || new Set()\nkeys = global.get(\"planning.track_columns\")\nitems = []\nfor(const key_i in keys){\n    sample = first[key_i]\n    key = keys[key_i]\n    if (typeof sample === 'string' || sample instanceof String) continue\n    item = {\n        title:key,\n        isChecked: charted_keys.has(key)\n    }\n    items.push(item)\n}\n\n\nreturn [\n    {payload:items},\n    {ui_control:{max:tf-t0}}\n]",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
@@ -8723,8 +8683,8 @@
         "links": [
             "ecb32f1e69ab1244"
         ],
-        "x": 325,
-        "y": 340,
+        "x": 285,
+        "y": 360,
         "wires": [
             [
                 "bce6903b48681af8",
@@ -8738,8 +8698,8 @@
         "z": "270280acb5c31a68",
         "name": "connected",
         "info": "",
-        "x": 240,
-        "y": 340,
+        "x": 200,
+        "y": 360,
         "wires": []
     },
     {
@@ -8789,8 +8749,8 @@
         "z": "270280acb5c31a68",
         "name": "update track props",
         "info": "",
-        "x": 210,
-        "y": 380,
+        "x": 170,
+        "y": 400,
         "wires": []
     },
     {
@@ -8803,8 +8763,8 @@
             "d887d48ee913340e",
             "26c16dadd62b9897"
         ],
-        "x": 325,
-        "y": 380,
+        "x": 285,
+        "y": 400,
         "wires": [
             [
                 "bce6903b48681af8",
@@ -8876,11 +8836,15 @@
         "height": 1,
         "name": "new tab chart",
         "label": "",
-        "format": "<a target=\"_blank\" href=\"https://nodered.blue-robots.com/linechart\">Chart in a new tab</a> ",
+        "format": "<a target=\"_blank\" href=\"{{msg.url}}\">Chart in a new tab</a> ",
         "layout": "col-center",
         "className": "",
-        "x": 200,
-        "y": 120,
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 620,
+        "y": 620,
         "wires": []
     },
     {
@@ -9098,7 +9062,7 @@
         "links": [
             "b97fe942d08f74a0"
         ],
-        "x": 325,
+        "x": 285,
         "y": 300,
         "wires": [
             [
@@ -9112,7 +9076,7 @@
         "z": "270280acb5c31a68",
         "name": "update chart props",
         "info": "",
-        "x": 210,
+        "x": 170,
         "y": 300,
         "wires": []
     },
@@ -9218,6 +9182,69 @@
             ],
             []
         ]
+    },
+    {
+        "id": "1d1c2d204bdf0d3b",
+        "type": "function",
+        "z": "270280acb5c31a68",
+        "name": "nodered url",
+        "func": "if(msg.payload == \"cloud\"){\n    url = \"https://nodered.blue-robots.com/linechart\"\n}else if (msg.payload == \"local\"){\n    url = \"localhost:1881/linechart\"\n}\nnode.status(url)\nreturn {url:url}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 660,
+        "wires": [
+            [
+                "d2a0ce4e6f8176cb",
+                "423f6ed2e934cc69"
+            ]
+        ]
+    },
+    {
+        "id": "513746a0acb84126",
+        "type": "link in",
+        "z": "270280acb5c31a68",
+        "name": "",
+        "links": [
+            "92be54cab625c80f"
+        ],
+        "x": 285,
+        "y": 660,
+        "wires": [
+            [
+                "1d1c2d204bdf0d3b"
+            ]
+        ]
+    },
+    {
+        "id": "2b63c4b91f1aab0e",
+        "type": "comment",
+        "z": "270280acb5c31a68",
+        "name": "cloud or local",
+        "info": "",
+        "x": 190,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "f612554a052fde61",
+        "type": "debug",
+        "z": "270280acb5c31a68",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 660,
+        "wires": []
     },
     {
         "id": "e541e1e014a3f70b",
@@ -10136,6 +10163,95 @@
         "active": true,
         "x": 440,
         "y": 180,
+        "wires": []
+    },
+    {
+        "id": "fdaca540562acf6b",
+        "type": "function",
+        "z": "d138c3c5017744fe",
+        "name": "deployment type",
+        "func": "if(msg.payload.publicIPv4 == \"20.240.40.232\"){\n    s = \"cloud\"\n}else{\n    s = \"local\"\n}\nnode.status(s)\nreturn {payload:s}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 500,
+        "wires": [
+            [
+                "92be54cab625c80f"
+            ]
+        ]
+    },
+    {
+        "id": "686b67bc3ed51f05",
+        "type": "ip",
+        "z": "d138c3c5017744fe",
+        "name": "ip",
+        "https": false,
+        "timeout": "5000",
+        "internalIPv4": true,
+        "internalIPv6": false,
+        "publicIPv4": true,
+        "publicIPv6": false,
+        "x": 390,
+        "y": 500,
+        "wires": [
+            [
+                "fdaca540562acf6b"
+            ]
+        ]
+    },
+    {
+        "id": "e187b7ec19cac054",
+        "type": "link in",
+        "z": "d138c3c5017744fe",
+        "name": "v2_map_to_map_setup",
+        "links": [
+            "ecb32f1e69ab1244"
+        ],
+        "x": 295,
+        "y": 500,
+        "wires": [
+            [
+                "686b67bc3ed51f05"
+            ]
+        ]
+    },
+    {
+        "id": "247392d48d382591",
+        "type": "comment",
+        "z": "d138c3c5017744fe",
+        "name": "connected",
+        "info": "",
+        "x": 210,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "92be54cab625c80f",
+        "type": "link out",
+        "z": "d138c3c5017744fe",
+        "name": "cloud or local",
+        "mode": "link",
+        "links": [
+            "5d5415816eb0390c",
+            "513746a0acb84126",
+            "12d90d1b85b7f51e"
+        ],
+        "x": 665,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "abbc265fbda32198",
+        "type": "comment",
+        "z": "d138c3c5017744fe",
+        "name": "cloud or local",
+        "info": "",
+        "x": 710,
+        "y": 460,
         "wires": []
     },
     {
