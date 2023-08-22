@@ -3182,14 +3182,14 @@
         "id": "05690f4fe18f582b",
         "type": "function",
         "z": "65c60c3b274f73e3",
-        "name": "mapproxy arcgis_world",
-        "func": "msg = {payload:{command:{}}};\nmsg.payload.command.map = {\n    \"name\":\"Esri Sat (Local)\", \n    \"url\":\"http://localhost:1889/mapproxy/service\",\n    \"opt\":{ \n        \"map\":\"arcgis_world\",\n        \"layers\":\"arcgis_world\",\n        \"format\":\"image/png\"\n    },\n    \"wms\":true\n};\n\nreturn msg;",
+        "name": "localhost/mapproxy/arcgis_world",
+        "func": "msg = {payload:{command:{}}};\nmsg.payload.command.map = {\n    \"name\":\"Esri Sat (Cached)\", \n    \"url\":\"http://localhost:1889/mapproxy/service\",\n    \"opt\":{ \n        \"map\":\"arcgis_world\",\n        \"layers\":\"arcgis_world\",\n        \"format\":\"image/png\"\n    },\n    \"wms\":true\n};\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 950,
+        "x": 970,
         "y": 780,
         "wires": [
             [
@@ -3257,7 +3257,8 @@
         "y": 700,
         "wires": [
             [
-                "5b2eb2e8293d53e9"
+                "721255d7a58f78fe",
+                "12c37e0bb25bb6c7"
             ]
         ]
     },
@@ -3291,34 +3292,15 @@
         "id": "2259d318ecb44061",
         "type": "function",
         "z": "65c60c3b274f73e3",
-        "name": "mapproxy swe_bathy",
-        "func": "msg = {payload:{command:{}}};\nmsg.payload.command.map = {\n    \"overlay\":\"Swe Bathy (Local)\", \n    \"url\":\"http://localhost:1889/mapproxy/service\",\n    \"opt\":{ \n        \"map\":\"swe_bathy\",\n        \"layers\":\"swe_bathy\",\n        \"format\":\"image/png\",\n        \"transparent\":true\n    },\n    \"wms\":true\n};\n\nreturn msg;",
+        "name": "localhost/mapproxy/swe_bathy",
+        "func": "msg = {payload:{command:{}}};\nmsg.payload.command.map = {\n    \"overlay\":\"Swe Bathy (Cached)\", \n    \"url\":\"http://localhost:1889/mapproxy/service\",\n    \"opt\":{ \n        \"map\":\"swe_bathy\",\n        \"layers\":\"swe_bathy\",\n        \"format\":\"image/png\",\n        \"transparent\":true\n    },\n    \"wms\":true\n};\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 940,
+        "x": 970,
         "y": 740,
-        "wires": [
-            [
-                "0c109ce581a119d2"
-            ]
-        ]
-    },
-    {
-        "id": "5b2eb2e8293d53e9",
-        "type": "function",
-        "z": "65c60c3b274f73e3",
-        "name": "Sweden.map",
-        "func": "msg = {payload:{command:{}}};\nmsg.payload.command.map = {\n    \"overlay\":\"Swe Bathy\", \n    \"url\":\"http://nodered.blue-robots.com/mapserver\",\n    \"opt\":{ \n        \"map\":\"/etc/mapserver/sweden.map\",\n        \"layers\":\"CONTOUR\",\n        \"format\":\"image/png\",\n        \"service\":\"wms\",\n        \"transparent\":true\n    },\n    \"wms\":true\n};\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 910,
-        "y": 700,
         "wires": [
             [
                 "0c109ce581a119d2"
@@ -3373,6 +3355,44 @@
         "x": 1300,
         "y": 740,
         "wires": []
+    },
+    {
+        "id": "721255d7a58f78fe",
+        "type": "function",
+        "z": "65c60c3b274f73e3",
+        "name": ".com/mapproxy/swe_bathy",
+        "func": "msg = {payload:{command:{}}};\nmsg.payload.command.map = {\n    \"overlay\":\"Swe Bathy (Cached)\", \n    \"url\":\"http://nodered.blue-robots.com/mapproxy/service/\",\n    \"opt\":{ \n        \"map\":\"swe_bathy\",\n        \"layers\":\"swe_bathy\",\n        \"format\":\"image/png\",\n        \"transparent\":true\n    },\n    \"wms\":true\n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 660,
+        "wires": [
+            [
+                "0c109ce581a119d2"
+            ]
+        ]
+    },
+    {
+        "id": "12c37e0bb25bb6c7",
+        "type": "function",
+        "z": "65c60c3b274f73e3",
+        "name": ".com/mapproxy/arcgis_world",
+        "func": "msg = {payload:{command:{}}};\nmsg.payload.command.map = {\n    \"name\":\"Esri Sat (Cached)\", \n    \"url\":\"http://nodered.blue-robots.com/mapproxy/service/\",\n    \"opt\":{ \n        \"map\":\"arcgis_world\",\n        \"layers\":\"arcgis_world\",\n        \"format\":\"image/png\"\n    },\n    \"wms\":true\n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 700,
+        "wires": [
+            [
+                "0c109ce581a119d2"
+            ]
+        ]
     },
     {
         "id": "38311862f50e9a0f",
