@@ -8642,14 +8642,12 @@
         "width": 12,
         "height": 10,
         "url": "",
-        "origin": "*",
+        "origin": "",
         "scale": "70",
         "x": 620,
-        "y": 660,
+        "y": 680,
         "wires": [
-            [
-                "f612554a052fde61"
-            ]
+            []
         ]
     },
     {
@@ -8844,7 +8842,7 @@
         "fontSize": "",
         "color": "#000000",
         "x": 620,
-        "y": 620,
+        "y": 640,
         "wires": []
     },
     {
@@ -9188,7 +9186,7 @@
         "type": "function",
         "z": "270280acb5c31a68",
         "name": "nodered url",
-        "func": "if(msg.payload == \"cloud\"){\n    url = \"https://nodered.blue-robots.com/linechart\"\n}else if (msg.payload == \"local\"){\n    url = \"localhost:1880/linechart\"\n}\nnode.status(url)\nreturn {url:url}",
+        "func": "if(msg.payload == \"cloud\"){\n    url = \"https://nodered.blue-robots.com/linechart\"\n}else if (msg.payload == \"local\"){\n    url = \"http://127.0.0.1:1880/linechart\"\n}\nnode.status(url)\nreturn {url:url}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -9226,23 +9224,6 @@
         "name": "cloud or local",
         "info": "",
         "x": 190,
-        "y": 660,
-        "wires": []
-    },
-    {
-        "id": "f612554a052fde61",
-        "type": "debug",
-        "z": "270280acb5c31a68",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 810,
         "y": 660,
         "wires": []
     },
