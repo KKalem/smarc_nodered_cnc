@@ -373,9 +373,9 @@
         "hidden": false
     },
     {
-        "id": "5d7e22e0630d2d8a",
+        "id": "c7204a5757d572ec",
         "type": "ui_spacer",
-        "z": "fc0b4b3d97bcee3e",
+        "z": "118dfccac2ca8a7d",
         "name": "spacer",
         "group": "a48b13904097fb6a",
         "order": 12,
@@ -383,9 +383,9 @@
         "height": 1
     },
     {
-        "id": "2b82b89d9f5372bc",
+        "id": "1e35ea9243397558",
         "type": "ui_spacer",
-        "z": "fc0b4b3d97bcee3e",
+        "z": "118dfccac2ca8a7d",
         "name": "spacer",
         "group": "a48b13904097fb6a",
         "order": 13,
@@ -393,39 +393,29 @@
         "height": 1
     },
     {
-        "id": "a9bf1a6ffd91d6f0",
+        "id": "fe62f0aac3053cd3",
         "type": "ui_spacer",
-        "z": "fc0b4b3d97bcee3e",
+        "z": "118dfccac2ca8a7d",
         "name": "spacer",
         "group": "a891e5f5f2effe35",
-        "order": 12,
+        "order": 18,
         "width": 1,
         "height": 1
     },
     {
-        "id": "369cd7765a3d1c6e",
+        "id": "310947c0863f8834",
         "type": "ui_spacer",
-        "z": "fc0b4b3d97bcee3e",
+        "z": "118dfccac2ca8a7d",
         "name": "spacer",
         "group": "a891e5f5f2effe35",
-        "order": 19,
+        "order": 21,
         "width": 1,
         "height": 1
     },
     {
-        "id": "b23d04fa1db050dc",
+        "id": "5d6d7ac5c7832191",
         "type": "ui_spacer",
-        "z": "fc0b4b3d97bcee3e",
-        "name": "spacer",
-        "group": "a891e5f5f2effe35",
-        "order": 22,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "1b9282f3b7a4f347",
-        "type": "ui_spacer",
-        "z": "fc0b4b3d97bcee3e",
+        "z": "118dfccac2ca8a7d",
         "name": "spacer",
         "group": "81d4dedb195938c4",
         "order": 3,
@@ -433,9 +423,9 @@
         "height": 1
     },
     {
-        "id": "9a60a0a5ea7bd05b",
+        "id": "a3e569d721acec93",
         "type": "ui_spacer",
-        "z": "fc0b4b3d97bcee3e",
+        "z": "118dfccac2ca8a7d",
         "name": "spacer",
         "group": "81d4dedb195938c4",
         "order": 6,
@@ -443,9 +433,9 @@
         "height": 1
     },
     {
-        "id": "b8b32a58932fefbe",
+        "id": "30fa1427110dc78d",
         "type": "ui_spacer",
-        "z": "fc0b4b3d97bcee3e",
+        "z": "118dfccac2ca8a7d",
         "name": "spacer",
         "group": "81d4dedb195938c4",
         "order": 8,
@@ -453,9 +443,9 @@
         "height": 1
     },
     {
-        "id": "a55b83dd45b89bc5",
+        "id": "6fdb678c37b99647",
         "type": "ui_spacer",
-        "z": "fc0b4b3d97bcee3e",
+        "z": "118dfccac2ca8a7d",
         "name": "spacer",
         "group": "c68132315359e81c",
         "order": 3,
@@ -463,9 +453,9 @@
         "height": 1
     },
     {
-        "id": "361dcc8e75ddc3de",
+        "id": "3b31742febe4ad99",
         "type": "ui_spacer",
-        "z": "fc0b4b3d97bcee3e",
+        "z": "118dfccac2ca8a7d",
         "name": "spacer",
         "group": "ba1fb12713836940",
         "order": 4,
@@ -473,9 +463,9 @@
         "height": 1
     },
     {
-        "id": "8b6d36088b99c5c5",
+        "id": "5babf69edeab86d2",
         "type": "ui_spacer",
-        "z": "fc0b4b3d97bcee3e",
+        "z": "118dfccac2ca8a7d",
         "name": "spacer",
         "group": "ba1fb12713836940",
         "order": 5,
@@ -2177,7 +2167,7 @@
         "label": "Planning Mode",
         "tooltip": "",
         "group": "a891e5f5f2effe35",
-        "order": 15,
+        "order": 14,
         "width": 5,
         "height": 1,
         "passthru": true,
@@ -3632,7 +3622,8 @@
             "90ed6d165a69da9a",
             "4373c2f7f323e633",
             "b947039dbcc46946",
-            "5952cfc79c5f6b64"
+            "5952cfc79c5f6b64",
+            "c99bc785359691c2"
         ],
         "x": 315,
         "y": 340,
@@ -3912,7 +3903,7 @@
         "type": "ui_text",
         "z": "118dfccac2ca8a7d",
         "group": "a891e5f5f2effe35",
-        "order": 14,
+        "order": 13,
         "width": 9,
         "height": 1,
         "name": "wp title",
@@ -4393,7 +4384,7 @@
         "label": "Lat,Lon",
         "tooltip": "LAT, LON input",
         "group": "a891e5f5f2effe35",
-        "order": 17,
+        "order": 16,
         "width": 5,
         "height": 1,
         "passthru": false,
@@ -4419,7 +4410,7 @@
         "label": "Use RPM",
         "tooltip": "",
         "group": "a891e5f5f2effe35",
-        "order": 24,
+        "order": 23,
         "width": 5,
         "height": 1,
         "passthru": true,
@@ -4453,7 +4444,7 @@
         "label": "Depth",
         "tooltip": "",
         "group": "a891e5f5f2effe35",
-        "order": 18,
+        "order": 19,
         "width": 2,
         "height": 1,
         "passthru": false,
@@ -4479,7 +4470,7 @@
         "label": "RPM",
         "tooltip": "",
         "group": "a891e5f5f2effe35",
-        "order": 23,
+        "order": 20,
         "width": 2,
         "height": 1,
         "passthru": false,
@@ -4505,7 +4496,7 @@
         "label": "Speed",
         "tooltip": "in m/s",
         "group": "a891e5f5f2effe35",
-        "order": 21,
+        "order": 22,
         "width": 2,
         "height": 1,
         "passthru": false,
@@ -4569,7 +4560,7 @@
         "z": "118dfccac2ca8a7d",
         "group": "a891e5f5f2effe35",
         "name": "wp list",
-        "order": 16,
+        "order": 15,
         "width": 4,
         "height": 7,
         "lineType": "two",
@@ -4608,7 +4599,8 @@
             "a66420d9524cd5c4",
             "6b697c3f32166673",
             "7bd029d62986c304",
-            "d9420850cbb92f49"
+            "d9420850cbb92f49",
+            "f6e1e34ff0d090ac"
         ],
         "x": 295,
         "y": 2040,
@@ -4753,7 +4745,7 @@
         "z": "118dfccac2ca8a7d",
         "name": "rename wp",
         "group": "a891e5f5f2effe35",
-        "order": 27,
+        "order": 26,
         "width": 3,
         "height": 1,
         "passthru": false,
@@ -4844,7 +4836,7 @@
         "z": "118dfccac2ca8a7d",
         "name": "delete wp",
         "group": "a891e5f5f2effe35",
-        "order": 28,
+        "order": 27,
         "width": 2,
         "height": 1,
         "passthru": false,
@@ -5184,8 +5176,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 390,
-        "y": 80,
+        "x": 1430,
+        "y": 100,
         "wires": [
             [
                 "6614fad89ea19f5e"
@@ -5203,8 +5195,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 560,
-        "y": 80,
+        "x": 1600,
+        "y": 100,
         "wires": [
             []
         ]
@@ -5818,7 +5810,7 @@
         "label": "Tolerance",
         "tooltip": "in m/s",
         "group": "a891e5f5f2effe35",
-        "order": 20,
+        "order": 17,
         "width": 2,
         "height": 1,
         "passthru": false,
@@ -5890,7 +5882,7 @@
         "type": "ui_text",
         "z": "118dfccac2ca8a7d",
         "group": "a891e5f5f2effe35",
-        "order": 31,
+        "order": 30,
         "width": 9,
         "height": 2,
         "name": "wp status",
@@ -6150,64 +6142,13 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 360,
-        "y": 180,
+        "x": 280,
+        "y": 140,
         "wires": [
             [
-                "5952cfc79c5f6b64"
+                "c99bc785359691c2"
             ]
         ]
-    },
-    {
-        "id": "c5eea9164d4cb3a1",
-        "type": "ui_button",
-        "z": "118dfccac2ca8a7d",
-        "name": "cleanup",
-        "group": "a891e5f5f2effe35",
-        "order": 13,
-        "width": 2,
-        "height": 1,
-        "passthru": false,
-        "label": "Cleanup",
-        "tooltip": "Removes bad plans",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 220,
-        "y": 180,
-        "wires": [
-            [
-                "50ea19eaaad7068e"
-            ]
-        ]
-    },
-    {
-        "id": "5952cfc79c5f6b64",
-        "type": "link out",
-        "z": "118dfccac2ca8a7d",
-        "name": "",
-        "mode": "link",
-        "links": [
-            "7c8b008791190499"
-        ],
-        "x": 455,
-        "y": 180,
-        "wires": []
-    },
-    {
-        "id": "18b7ce48865499b0",
-        "type": "comment",
-        "z": "118dfccac2ca8a7d",
-        "name": "update list of plans",
-        "info": "",
-        "x": 570,
-        "y": 180,
-        "wires": []
     },
     {
         "id": "aafdf17560164b3b",
@@ -6217,7 +6158,7 @@
         "label": "Arrival Heading",
         "tooltip": "Desired heading of the robot when it arrives this WP",
         "group": "a891e5f5f2effe35",
-        "order": 25,
+        "order": 24,
         "width": 5,
         "height": 1,
         "passthru": false,
@@ -6352,7 +6293,7 @@
         "label": "Use hdg",
         "tooltip": "",
         "group": "a891e5f5f2effe35",
-        "order": 26,
+        "order": 25,
         "width": 5,
         "height": 1,
         "passthru": true,
@@ -6410,7 +6351,7 @@
         "z": "118dfccac2ca8a7d",
         "name": "move wp up",
         "group": "a891e5f5f2effe35",
-        "order": 29,
+        "order": 28,
         "width": 2,
         "height": 1,
         "passthru": false,
@@ -6438,7 +6379,7 @@
         "z": "118dfccac2ca8a7d",
         "name": "move wp down",
         "group": "a891e5f5f2effe35",
-        "order": 30,
+        "order": 29,
         "width": 2,
         "height": 1,
         "passthru": false,
@@ -6641,6 +6582,111 @@
                 "056f5e043af8751c"
             ]
         ]
+    },
+    {
+        "id": "80740e3ac216608c",
+        "type": "ui_button",
+        "z": "118dfccac2ca8a7d",
+        "name": "unselect",
+        "group": "a891e5f5f2effe35",
+        "order": 12,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Unselect",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 120,
+        "y": 120,
+        "wires": [
+            [
+                "8c911f971d6a848d",
+                "50ea19eaaad7068e"
+            ]
+        ]
+    },
+    {
+        "id": "8c911f971d6a848d",
+        "type": "change",
+        "z": "118dfccac2ca8a7d",
+        "name": "set selected plan name to empty",
+        "rules": [
+            {
+                "t": "set",
+                "p": "gui.selected_plan_name",
+                "pt": "global",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 350,
+        "y": 100,
+        "wires": [
+            [
+                "f6e1e34ff0d090ac",
+                "c99bc785359691c2"
+            ]
+        ]
+    },
+    {
+        "id": "f6e1e34ff0d090ac",
+        "type": "link out",
+        "z": "118dfccac2ca8a7d",
+        "name": "",
+        "mode": "link",
+        "links": [
+            "c1a9221f5cb68d31",
+            "4facb95ab46fd02a",
+            "b391488f986dfd76"
+        ],
+        "x": 545,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "7aba7ad6c3c0e0ca",
+        "type": "comment",
+        "z": "118dfccac2ca8a7d",
+        "name": "update list of wps",
+        "info": "",
+        "x": 660,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "c99bc785359691c2",
+        "type": "link out",
+        "z": "118dfccac2ca8a7d",
+        "name": "",
+        "mode": "link",
+        "links": [
+            "7c8b008791190499"
+        ],
+        "x": 545,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "856dd772e464cd3d",
+        "type": "comment",
+        "z": "118dfccac2ca8a7d",
+        "name": "update list of plans",
+        "info": "",
+        "x": 670,
+        "y": 120,
+        "wires": []
     },
     {
         "id": "4295e5f475da817c",
