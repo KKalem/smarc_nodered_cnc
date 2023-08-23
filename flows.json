@@ -355,126 +355,6 @@
         "className": ""
     },
     {
-        "id": "8bef5f2f94b4f7d2",
-        "type": "ui_spacer",
-        "z": "2e13c73254d13882",
-        "name": "spacer",
-        "group": "a48b13904097fb6a",
-        "order": 12,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "f2e136120b9b3c9a",
-        "type": "ui_spacer",
-        "z": "2e13c73254d13882",
-        "name": "spacer",
-        "group": "a48b13904097fb6a",
-        "order": 13,
-        "width": 6,
-        "height": 1
-    },
-    {
-        "id": "c15fa905f12c9f1b",
-        "type": "ui_spacer",
-        "z": "2e13c73254d13882",
-        "name": "spacer",
-        "group": "a891e5f5f2effe35",
-        "order": 12,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "2b4cdf20da1355b8",
-        "type": "ui_spacer",
-        "z": "2e13c73254d13882",
-        "name": "spacer",
-        "group": "a891e5f5f2effe35",
-        "order": 19,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "89a4b8474c1c0734",
-        "type": "ui_spacer",
-        "z": "2e13c73254d13882",
-        "name": "spacer",
-        "group": "a891e5f5f2effe35",
-        "order": 22,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "468fda621560b78f",
-        "type": "ui_spacer",
-        "z": "2e13c73254d13882",
-        "name": "spacer",
-        "group": "81d4dedb195938c4",
-        "order": 3,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "338aeed75b5940f6",
-        "type": "ui_spacer",
-        "z": "2e13c73254d13882",
-        "name": "spacer",
-        "group": "81d4dedb195938c4",
-        "order": 6,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "22109d89af811acd",
-        "type": "ui_spacer",
-        "z": "2e13c73254d13882",
-        "name": "spacer",
-        "group": "81d4dedb195938c4",
-        "order": 8,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "6485cfa658391b22",
-        "type": "ui_spacer",
-        "z": "2e13c73254d13882",
-        "name": "spacer",
-        "group": "c68132315359e81c",
-        "order": 3,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "7d0815d79a480207",
-        "type": "ui_spacer",
-        "z": "2e13c73254d13882",
-        "name": "spacer",
-        "group": "ba1fb12713836940",
-        "order": 4,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "15f2fb2a06022aec",
-        "type": "ui_spacer",
-        "z": "2e13c73254d13882",
-        "name": "spacer",
-        "group": "ba1fb12713836940",
-        "order": 5,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "c61f8184fbeb5dbc",
-        "type": "ui_spacer",
-        "z": "2e13c73254d13882",
-        "name": "spacer",
-        "group": "58bfc9cc19b0c4cd",
-        "order": 5,
-        "width": 6,
-        "height": 1
-    },
-    {
         "id": "4288cd38.5e0304",
         "type": "ui_group",
         "name": "IFrame01",
@@ -491,6 +371,116 @@
         "icon": "dashboard",
         "disabled": false,
         "hidden": false
+    },
+    {
+        "id": "5d7e22e0630d2d8a",
+        "type": "ui_spacer",
+        "z": "fc0b4b3d97bcee3e",
+        "name": "spacer",
+        "group": "a48b13904097fb6a",
+        "order": 12,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "2b82b89d9f5372bc",
+        "type": "ui_spacer",
+        "z": "fc0b4b3d97bcee3e",
+        "name": "spacer",
+        "group": "a48b13904097fb6a",
+        "order": 13,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "a9bf1a6ffd91d6f0",
+        "type": "ui_spacer",
+        "z": "fc0b4b3d97bcee3e",
+        "name": "spacer",
+        "group": "a891e5f5f2effe35",
+        "order": 12,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "369cd7765a3d1c6e",
+        "type": "ui_spacer",
+        "z": "fc0b4b3d97bcee3e",
+        "name": "spacer",
+        "group": "a891e5f5f2effe35",
+        "order": 19,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "b23d04fa1db050dc",
+        "type": "ui_spacer",
+        "z": "fc0b4b3d97bcee3e",
+        "name": "spacer",
+        "group": "a891e5f5f2effe35",
+        "order": 22,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "1b9282f3b7a4f347",
+        "type": "ui_spacer",
+        "z": "fc0b4b3d97bcee3e",
+        "name": "spacer",
+        "group": "81d4dedb195938c4",
+        "order": 3,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "9a60a0a5ea7bd05b",
+        "type": "ui_spacer",
+        "z": "fc0b4b3d97bcee3e",
+        "name": "spacer",
+        "group": "81d4dedb195938c4",
+        "order": 6,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "b8b32a58932fefbe",
+        "type": "ui_spacer",
+        "z": "fc0b4b3d97bcee3e",
+        "name": "spacer",
+        "group": "81d4dedb195938c4",
+        "order": 8,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "a55b83dd45b89bc5",
+        "type": "ui_spacer",
+        "z": "fc0b4b3d97bcee3e",
+        "name": "spacer",
+        "group": "c68132315359e81c",
+        "order": 3,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "361dcc8e75ddc3de",
+        "type": "ui_spacer",
+        "z": "fc0b4b3d97bcee3e",
+        "name": "spacer",
+        "group": "ba1fb12713836940",
+        "order": 4,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "8b6d36088b99c5c5",
+        "type": "ui_spacer",
+        "z": "fc0b4b3d97bcee3e",
+        "name": "spacer",
+        "group": "ba1fb12713836940",
+        "order": 5,
+        "width": 1,
+        "height": 1
     },
     {
         "id": "a04b59e608979f6a",
@@ -747,6 +737,7 @@
         ],
         "seg1": "30",
         "seg2": "60",
+        "diff": false,
         "className": "",
         "x": 850,
         "y": 760,
@@ -801,6 +792,7 @@
         ],
         "seg1": "-800",
         "seg2": "800",
+        "diff": true,
         "className": "",
         "x": 850,
         "y": 880,
@@ -828,6 +820,7 @@
         ],
         "seg1": "-800",
         "seg2": "800",
+        "diff": true,
         "className": "",
         "x": 850,
         "y": 920,
@@ -1342,8 +1335,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 910,
-        "y": 220,
+        "x": 930,
+        "y": 300,
         "wires": [
             [
                 "92a2d6eb5f8e7b77"
@@ -1362,6 +1355,20 @@
                 "pt": "global",
                 "to": "{}",
                 "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
             }
         ],
         "action": "",
@@ -1369,10 +1376,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1120,
-        "y": 220,
+        "x": 1020,
+        "y": 340,
         "wires": [
-            []
+            [
+                "c54280fcb8feb66c"
+            ]
         ]
     },
     {
@@ -1400,7 +1409,8 @@
         "z": "072468ee5a218dc0",
         "name": "toggle readouts",
         "links": [
-            "cf8fbcc8cd92e83a"
+            "cf8fbcc8cd92e83a",
+            "c54280fcb8feb66c"
         ],
         "x": 345,
         "y": 900,
@@ -1665,6 +1675,32 @@
         "info": "",
         "x": 650,
         "y": 100,
+        "wires": []
+    },
+    {
+        "id": "c54280fcb8feb66c",
+        "type": "link out",
+        "z": "072468ee5a218dc0",
+        "name": "",
+        "mode": "link",
+        "links": [
+            "b486adbab9a480eb",
+            "dee9d1fab2fcec69",
+            "4b6e527791532f8d",
+            "31309c347c995d7a"
+        ],
+        "x": 1175,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "a48da176e96b6514",
+        "type": "comment",
+        "z": "072468ee5a218dc0",
+        "name": "toggle readouts",
+        "info": "",
+        "x": 1240,
+        "y": 300,
         "wires": []
     },
     {
@@ -4338,7 +4374,8 @@
         "z": "118dfccac2ca8a7d",
         "name": "toggle readouts",
         "links": [
-            "cf8fbcc8cd92e83a"
+            "cf8fbcc8cd92e83a",
+            "c54280fcb8feb66c"
         ],
         "x": 305,
         "y": 1160,
@@ -6493,6 +6530,7 @@
         ],
         "seg1": "",
         "seg2": "",
+        "diff": false,
         "className": "",
         "x": 1020,
         "y": 1120,
@@ -7037,7 +7075,8 @@
         "z": "426a5003775714f9",
         "name": "toggle readouts",
         "links": [
-            "cf8fbcc8cd92e83a"
+            "cf8fbcc8cd92e83a",
+            "c54280fcb8feb66c"
         ],
         "x": 745,
         "y": 100,
@@ -8586,7 +8625,7 @@
         "type": "function",
         "z": "fc0b4b3d97bcee3e",
         "name": "update marker list and map",
-        "func": "markers = global.get(\"gui.markers\")\nif(!markers) return\n\nselected_marker_name = global.get(\"gui.selected_marker_name\")\n\nnow = Date.now()/1000\n\nlist_items = []\nfor(const marker_name in markers){\n    marker = markers[marker_name]\n    if(!marker.lat || !marker.lon) continue\n    \n    tdiff = parseInt(now - marker.last_update)\n    \n    if(tdiff < 600){\n        marker.iconColor = global.get(\"gui.colors.active\")\n        marker.label = marker.name\n    }else{\n        marker.iconColor = global.get(\"gui.colors.old\")\n        marker.label = null\n    }\n    \n    marker_selected = marker.name == selected_marker_name\n    if(marker_selected){\n        marker.iconColor = global.get(\"gui.colors.selected\")\n    }\n    \n    node.send([{payload:marker}, null])\n    \n    title = \"<font color=\" + marker.iconColor +\">\" + marker.name\n    if(tdiff > 600) description = \"Last update >10m ago\"\n    else description = \"Last updated \"+tdiff+\"s ago\"\n    node.status(tdiff)\n    list_item = {\n        title: title,\n        description: description\n    }\n    list_items.push(list_item)\n}\n\nreturn [null, {payload:list_items}]",
+        "func": "markers = global.get(\"gui.markers\")\nif(!markers) return [null, {payload:[]}]\n\nselected_marker_name = global.get(\"gui.selected_marker_name\")\n\nnow = Date.now()/1000\n\nlist_items = []\nfor(const marker_name in markers){\n    marker = markers[marker_name]\n    if(!marker.lat || !marker.lon) continue\n    \n    tdiff = parseInt(now - marker.last_update)\n    \n    if(tdiff < 600){\n        marker.iconColor = global.get(\"gui.colors.active\")\n        marker.label = marker.name\n    }else{\n        marker.iconColor = global.get(\"gui.colors.old\")\n        marker.label = null\n    }\n    \n    marker_selected = marker.name == selected_marker_name\n    if(marker_selected){\n        marker.iconColor = global.get(\"gui.colors.selected\")\n    }\n    \n    node.send([{payload:marker}, null])\n    \n    title = \"<font color=\" + marker.iconColor +\">\" + marker.name\n    if(tdiff > 600) description = \"Last update >10m ago\"\n    else description = \"Last updated \"+tdiff+\"s ago\"\n    node.status(tdiff)\n    list_item = {\n        title: title,\n        description: description\n    }\n    list_items.push(list_item)\n}\n\nreturn [null, {payload:list_items}]",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
@@ -8632,7 +8671,7 @@
         "z": "fc0b4b3d97bcee3e",
         "group": "11c21897a7ad9fb5",
         "name": "markers",
-        "order": 1,
+        "order": 2,
         "width": 0,
         "height": 0,
         "lineType": "three",
@@ -8666,6 +8705,27 @@
                 "2daf4eea9d6d2fdd"
             ]
         ]
+    },
+    {
+        "id": "d1597d9ee5c744fa",
+        "type": "ui_text",
+        "z": "fc0b4b3d97bcee3e",
+        "group": "11c21897a7ad9fb5",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Markers from Owntracks",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 850,
+        "y": 280,
+        "wires": []
     },
     {
         "id": "5d528234543fa099",
@@ -9129,14 +9189,14 @@
         "type": "function",
         "z": "270280acb5c31a68",
         "name": "set start to last",
-        "func": "tracks = global.get(\"planning.tracks\")\nif(!tracks) return\nstn = global.get(\"gui.selected_track_name\")\nif(!stn) return\ntrack = tracks[stn]\nif(track.data.length < 1) return\n\nfirst = track.data[0]\nlast = track.data[track.data.length-1]\n\nt0 = parseInt(first.last_update)\ntf = parseInt(last.last_update)\n\n\nduration = global.get(\"gui.chart_duration\") || 10\n\nreturn {payload: tf-t0 - duration}",
+        "func": "tracks = global.get(\"planning.tracks\")\nif(!tracks) return\nstn = global.get(\"gui.selected_track_name\")\nif(!stn) return\ntrack = tracks[stn]\nif(track.data.length < 1) return\n\nfirst = track.data[0]\nlast = track.data[track.data.length-1]\n\nt0 = first[0]\ntf = last[0]\nnode.status(\"0:\"+t0+\" f:\"+tf)\n\n\nduration = global.get(\"gui.chart_duration\") || 10\n\nreturn {payload: parseInt(tf-t0 - duration)}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 480,
-        "y": 260,
+        "x": 460,
+        "y": 280,
         "wires": [
             [
                 "1e180f06c010b56b"
