@@ -2320,7 +2320,7 @@
         "finalize": "",
         "libs": [],
         "x": 770,
-        "y": 1440,
+        "y": 1540,
         "wires": [
             [
                 "c7d4d5de96d19781",
@@ -2361,7 +2361,7 @@
             "38442de6ffbfa350",
             "338233d5c53202af"
         ],
-        "x": 205,
+        "x": 175,
         "y": 1420,
         "wires": [
             [
@@ -2406,24 +2406,18 @@
         "id": "d2f284617e677636",
         "type": "function",
         "z": "65c60c3b274f73e3",
-        "name": "clear planning layer",
-        "func": "// get the list of stuff we drew before and delete them all\ndom = global.get(\"gui.drawn_on_map\") || new Set()\n\n\n// delete all the markers one by one because\n// for some reason the clear layer\n// thing doesnt delete them proper?\nfor(const item of dom){\n    p = {name:item, deleted:true, lat:0, lon:0}\n    node.send({payload:p})\n}\ndom = new Set()\n\n// clear the planning layer\n// and trigger some other stuff\nreturn [\n    {payload:{command:{clear:\"planning\"}}},\n    {}\n]",
-        "outputs": 2,
+        "name": "clear drawn objects",
+        "func": "// get the list of stuff we drew before and delete them all\ndom = global.get(\"gui.drawn_on_map\") || new Set()\n\n\n// delete all the markers one by one because\n// for some reason the clear layer\n// thing doesnt delete them proper?\nfor(const item of dom){\n    p = {name:item, deleted:true}\n    node.send({payload:p})\n}\ndom = new Set()\nglobal.set(\"gui.drawn_on_map\", dom)\n\n\n",
+        "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 510,
+        "x": 570,
         "y": 1420,
         "wires": [
             [
                 "c7d4d5de96d19781"
-            ],
-            [
-                "df49c5e8f94952de",
-                "86c0559201508b50",
-                "087bc95837a9d012",
-                "28047fbd71cfcbd5"
             ]
         ]
     },
@@ -2439,7 +2433,7 @@
         "finalize": "",
         "libs": [],
         "x": 710,
-        "y": 1480,
+        "y": 1580,
         "wires": [
             [
                 "c7d4d5de96d19781",
@@ -2586,7 +2580,7 @@
         "z": "65c60c3b274f73e3",
         "name": "map",
         "info": "",
-        "x": 1220,
+        "x": 1230,
         "y": 1420,
         "wires": []
     },
@@ -2601,8 +2595,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1250,
-        "y": 1500,
+        "x": 1230,
+        "y": 1580,
         "wires": [
             []
         ]
@@ -2642,12 +2636,11 @@
         "finalize": "",
         "libs": [],
         "x": 710,
-        "y": 1520,
+        "y": 1620,
         "wires": [
             [
                 "c7d4d5de96d19781",
-                "d443219a2ff95383",
-                "dca3b158c362b292"
+                "d443219a2ff95383"
             ]
         ]
     },
@@ -2690,7 +2683,7 @@
         "finalize": "",
         "libs": [],
         "x": 920,
-        "y": 1540,
+        "y": 1640,
         "wires": [
             [
                 "c7d4d5de96d19781",
@@ -2710,7 +2703,7 @@
         "finalize": "",
         "libs": [],
         "x": 920,
-        "y": 1580,
+        "y": 1680,
         "wires": [
             [
                 "d443219a2ff95383",
@@ -2730,7 +2723,7 @@
         "finalize": "",
         "libs": [],
         "x": 720,
-        "y": 1560,
+        "y": 1660,
         "wires": [
             [
                 "2eee1d2a8a2e7b36",
@@ -2779,11 +2772,13 @@
         "drop": true,
         "allowrate": false,
         "outputs": 1,
-        "x": 320,
+        "x": 300,
         "y": 1420,
         "wires": [
             [
-                "d2f284617e677636"
+                "d2f284617e677636",
+                "20e04a551398ff77",
+                "a986a94949236f9c"
             ]
         ]
     },
@@ -3411,21 +3406,53 @@
         ]
     },
     {
-        "id": "dca3b158c362b292",
-        "type": "debug",
+        "id": "20e04a551398ff77",
+        "type": "function",
         "z": "65c60c3b274f73e3",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1190,
-        "y": 1660,
-        "wires": []
+        "name": "clear layers",
+        "func": "// clear the planning layer\n// and trigger some other stuff\nnode.send({payload:{command:{clear:\"planning\"}}})\nnode.send({payload:{command:{clear:\"tracks\"}}})\nnode.send({payload:{command:{clear:\"_drawing\"}}})",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 1460,
+        "wires": [
+            [
+                "c7d4d5de96d19781"
+            ]
+        ]
+    },
+    {
+        "id": "a986a94949236f9c",
+        "type": "change",
+        "z": "65c60c3b274f73e3",
+        "name": "trigger",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 1600,
+        "wires": [
+            [
+                "df49c5e8f94952de",
+                "86c0559201508b50",
+                "087bc95837a9d012",
+                "28047fbd71cfcbd5"
+            ]
+        ]
     },
     {
         "id": "38311862f50e9a0f",
