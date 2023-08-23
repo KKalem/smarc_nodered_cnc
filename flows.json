@@ -373,9 +373,9 @@
         "hidden": false
     },
     {
-        "id": "c7204a5757d572ec",
+        "id": "457f38aec4ebfcba",
         "type": "ui_spacer",
-        "z": "118dfccac2ca8a7d",
+        "z": "762b3e4e742fe2ea",
         "name": "spacer",
         "group": "a48b13904097fb6a",
         "order": 12,
@@ -383,9 +383,9 @@
         "height": 1
     },
     {
-        "id": "1e35ea9243397558",
+        "id": "be912736679f20e6",
         "type": "ui_spacer",
-        "z": "118dfccac2ca8a7d",
+        "z": "762b3e4e742fe2ea",
         "name": "spacer",
         "group": "a48b13904097fb6a",
         "order": 13,
@@ -393,9 +393,9 @@
         "height": 1
     },
     {
-        "id": "fe62f0aac3053cd3",
+        "id": "94a095304d680dd6",
         "type": "ui_spacer",
-        "z": "118dfccac2ca8a7d",
+        "z": "762b3e4e742fe2ea",
         "name": "spacer",
         "group": "a891e5f5f2effe35",
         "order": 18,
@@ -403,9 +403,9 @@
         "height": 1
     },
     {
-        "id": "310947c0863f8834",
+        "id": "53c534e732a985e3",
         "type": "ui_spacer",
-        "z": "118dfccac2ca8a7d",
+        "z": "762b3e4e742fe2ea",
         "name": "spacer",
         "group": "a891e5f5f2effe35",
         "order": 21,
@@ -413,9 +413,9 @@
         "height": 1
     },
     {
-        "id": "5d6d7ac5c7832191",
+        "id": "bf6caf59bfa120b2",
         "type": "ui_spacer",
-        "z": "118dfccac2ca8a7d",
+        "z": "762b3e4e742fe2ea",
         "name": "spacer",
         "group": "81d4dedb195938c4",
         "order": 3,
@@ -423,9 +423,9 @@
         "height": 1
     },
     {
-        "id": "a3e569d721acec93",
+        "id": "f7c6d3d7e02b085a",
         "type": "ui_spacer",
-        "z": "118dfccac2ca8a7d",
+        "z": "762b3e4e742fe2ea",
         "name": "spacer",
         "group": "81d4dedb195938c4",
         "order": 6,
@@ -433,9 +433,9 @@
         "height": 1
     },
     {
-        "id": "30fa1427110dc78d",
+        "id": "b998d69e55d43901",
         "type": "ui_spacer",
-        "z": "118dfccac2ca8a7d",
+        "z": "762b3e4e742fe2ea",
         "name": "spacer",
         "group": "81d4dedb195938c4",
         "order": 8,
@@ -443,19 +443,9 @@
         "height": 1
     },
     {
-        "id": "6fdb678c37b99647",
+        "id": "fc469908c45f7382",
         "type": "ui_spacer",
-        "z": "118dfccac2ca8a7d",
-        "name": "spacer",
-        "group": "c68132315359e81c",
-        "order": 3,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "3b31742febe4ad99",
-        "type": "ui_spacer",
-        "z": "118dfccac2ca8a7d",
+        "z": "762b3e4e742fe2ea",
         "name": "spacer",
         "group": "ba1fb12713836940",
         "order": 4,
@@ -463,9 +453,9 @@
         "height": 1
     },
     {
-        "id": "5babf69edeab86d2",
+        "id": "2cc4960db49254b4",
         "type": "ui_spacer",
-        "z": "118dfccac2ca8a7d",
+        "z": "762b3e4e742fe2ea",
         "name": "spacer",
         "group": "ba1fb12713836940",
         "order": 5,
@@ -7969,7 +7959,7 @@
         "z": "762b3e4e742fe2ea",
         "name": "update_markers_on_map",
         "info": "",
-        "x": 1090,
+        "x": 1170,
         "y": 120,
         "wires": []
     },
@@ -7982,7 +7972,7 @@
         "links": [
             "bb3002ce85983e34"
         ],
-        "x": 955,
+        "x": 1035,
         "y": 120,
         "wires": []
     },
@@ -8127,7 +8117,7 @@
         "links": [
             "3a21e43de6a62c77"
         ],
-        "x": 955,
+        "x": 1035,
         "y": 160,
         "wires": []
     },
@@ -8147,7 +8137,7 @@
         "z": "762b3e4e742fe2ea",
         "name": "toggle track buttons",
         "info": "",
-        "x": 1070,
+        "x": 1150,
         "y": 160,
         "wires": []
     },
@@ -8186,7 +8176,7 @@
             "8d7df9bbd47ed65e",
             "33411c9df353d561"
         ],
-        "x": 955,
+        "x": 1035,
         "y": 80,
         "wires": []
     },
@@ -8196,7 +8186,7 @@
         "z": "762b3e4e742fe2ea",
         "name": "update track props",
         "info": "",
-        "x": 1070,
+        "x": 1150,
         "y": 80,
         "wires": []
     },
@@ -8309,7 +8299,7 @@
             "aa55b377d9e3c710",
             "a33b80c387b0a157"
         ],
-        "x": 955,
+        "x": 1035,
         "y": 200,
         "wires": []
     },
@@ -8319,7 +8309,7 @@
         "z": "762b3e4e742fe2ea",
         "name": "update track list",
         "info": "",
-        "x": 1060,
+        "x": 1140,
         "y": 200,
         "wires": []
     },
@@ -8332,7 +8322,7 @@
         "links": [
             "a4c594419f3e083e"
         ],
-        "x": 955,
+        "x": 1035,
         "y": 240,
         "wires": []
     },
@@ -8342,7 +8332,7 @@
         "z": "762b3e4e742fe2ea",
         "name": "download track",
         "info": "",
-        "x": 1060,
+        "x": 1140,
         "y": 240,
         "wires": []
     },
@@ -8594,6 +8584,65 @@
             [
                 "261f0120f595c54a",
                 "118b4f57e93fbfe8"
+            ]
+        ]
+    },
+    {
+        "id": "54c4ba32a93c1771",
+        "type": "ui_button",
+        "z": "762b3e4e742fe2ea",
+        "name": "unselect",
+        "group": "c68132315359e81c",
+        "order": 3,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Unselect",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 300,
+        "y": 180,
+        "wires": [
+            [
+                "ea9f5528d8c398ab"
+            ]
+        ]
+    },
+    {
+        "id": "ea9f5528d8c398ab",
+        "type": "change",
+        "z": "762b3e4e742fe2ea",
+        "name": "set selected track name to empty",
+        "rules": [
+            {
+                "t": "set",
+                "p": "gui.selected_track_name",
+                "pt": "global",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 760,
+        "y": 180,
+        "wires": [
+            [
+                "26c16dadd62b9897",
+                "1ede7c0d3d4c959f",
+                "21abeedf185de74b",
+                "08d4acd84084a6b0",
+                "8ed7c0d75e2bcd8b"
             ]
         ]
     },
