@@ -10402,6 +10402,16 @@
         ]
     },
     {
+        "id": "12b0a5b5d9322cec",
+        "type": "comment",
+        "z": "d138c3c5017744fe",
+        "name": "map connected",
+        "info": "",
+        "x": 160,
+        "y": 460,
+        "wires": []
+    },
+    {
         "id": "971e249694708d56",
         "type": "link in",
         "z": "e102b211ecdda64d",
