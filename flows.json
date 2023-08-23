@@ -1679,7 +1679,7 @@
         "lat": "58.25089840041283",
         "lon": "11.4500587783608",
         "zoom": "16",
-        "layer": "EsriS",
+        "layer": "Custom",
         "cluster": "",
         "maxage": "",
         "usermenu": "show",
@@ -1694,7 +1694,7 @@
         "path": "/worldmap",
         "overlist": "",
         "maplist": "OSMC,EsriS,EsriT",
-        "mapname": "Esri Sat (Local)",
+        "mapname": "Esri Sat (Cached)",
         "mapurl": "http://localhost:1889/mapproxy/service",
         "mapopt": "{\"map\":\"arcgis_world\",\"layers\":\"arcgis_world\",\"format\":\"image/png\"}",
         "mapwms": true,
@@ -1854,7 +1854,8 @@
             "fd8f7e829592b528",
             "a5d4b41045dbb4d2",
             "fee0c34e30954d84",
-            "e187b7ec19cac054"
+            "e187b7ec19cac054",
+            "365d3e492fd387f3"
         ],
         "x": 435,
         "y": 60,
@@ -10209,7 +10210,7 @@
         "type": "function",
         "z": "d138c3c5017744fe",
         "name": "deployment type",
-        "func": "if(msg.payload.publicIPv4 == \"20.240.40.232\"){\n    s = \"cloud\"\n}else{\n    s = \"local\"\n}\nnode.status(s)\nreturn {payload:s, topic:\"deployment_type\"}",
+        "func": "s = \"local\"\nif(msg.payload.publicIPv4 == \"20.240.40.232\"){\n    s = \"cloud\"\n}\n\nnode.status(s)\nreturn {payload:s, topic:\"deployment_type\"}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -10234,39 +10235,13 @@
         "internalIPv6": false,
         "publicIPv4": true,
         "publicIPv6": false,
-        "x": 390,
-        "y": 500,
+        "x": 370,
+        "y": 540,
         "wires": [
             [
                 "fdaca540562acf6b"
             ]
         ]
-    },
-    {
-        "id": "e187b7ec19cac054",
-        "type": "link in",
-        "z": "d138c3c5017744fe",
-        "name": "v2_map_to_map_setup",
-        "links": [
-            "ecb32f1e69ab1244"
-        ],
-        "x": 295,
-        "y": 500,
-        "wires": [
-            [
-                "686b67bc3ed51f05"
-            ]
-        ]
-    },
-    {
-        "id": "247392d48d382591",
-        "type": "comment",
-        "z": "d138c3c5017744fe",
-        "name": "connected",
-        "info": "",
-        "x": 210,
-        "y": 500,
-        "wires": []
     },
     {
         "id": "92be54cab625c80f",
@@ -10283,7 +10258,7 @@
             "2648acabeaadf850",
             "4683a551857ab675"
         ],
-        "x": 665,
+        "x": 685,
         "y": 500,
         "wires": []
     },
@@ -10295,6 +10270,61 @@
         "info": "",
         "x": 710,
         "y": 460,
+        "wires": []
+    },
+    {
+        "id": "8862c190f6cb0bf4",
+        "type": "inject",
+        "z": "d138c3c5017744fe",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 210,
+        "y": 540,
+        "wires": [
+            [
+                "686b67bc3ed51f05"
+            ]
+        ]
+    },
+    {
+        "id": "365d3e492fd387f3",
+        "type": "link in",
+        "z": "d138c3c5017744fe",
+        "name": "",
+        "links": [
+            "ecb32f1e69ab1244"
+        ],
+        "x": 405,
+        "y": 480,
+        "wires": [
+            [
+                "fdaca540562acf6b"
+            ]
+        ]
+    },
+    {
+        "id": "6a31d347dc83d4dd",
+        "type": "comment",
+        "z": "d138c3c5017744fe",
+        "name": "Connected",
+        "info": "",
+        "x": 340,
+        "y": 440,
         "wires": []
     },
     {
