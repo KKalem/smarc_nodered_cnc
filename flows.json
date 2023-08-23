@@ -3212,7 +3212,7 @@
         "links": [
             "1e0bd19ab17b797e"
         ],
-        "x": 845,
+        "x": 985,
         "y": 740,
         "wires": []
     },
@@ -3222,8 +3222,8 @@
         "z": "65c60c3b274f73e3",
         "name": "map",
         "info": "",
-        "x": 930,
-        "y": 740,
+        "x": 1010,
+        "y": 780,
         "wires": []
     },
     {
@@ -3288,7 +3288,7 @@
         "y": 720,
         "wires": [
             [
-                "0c109ce581a119d2"
+                "232221c6c465a0ec"
             ]
         ]
     },
@@ -3307,7 +3307,7 @@
         "y": 760,
         "wires": [
             [
-                "0c109ce581a119d2"
+                "ec0974bfd6838822"
             ]
         ]
     },
@@ -3352,6 +3352,46 @@
         "x": 720,
         "y": 340,
         "wires": []
+    },
+    {
+        "id": "232221c6c465a0ec",
+        "type": "rbe",
+        "z": "65c60c3b274f73e3",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 870,
+        "y": 720,
+        "wires": [
+            [
+                "0c109ce581a119d2"
+            ]
+        ]
+    },
+    {
+        "id": "ec0974bfd6838822",
+        "type": "rbe",
+        "z": "65c60c3b274f73e3",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 870,
+        "y": 760,
+        "wires": [
+            [
+                "0c109ce581a119d2"
+            ]
+        ]
     },
     {
         "id": "38311862f50e9a0f",
@@ -10250,8 +10290,7 @@
         "y": 540,
         "wires": [
             [
-                "fdaca540562acf6b",
-                "08cfd687626bdd27"
+                "fdaca540562acf6b"
             ]
         ]
     },
@@ -10312,23 +10351,6 @@
                 "686b67bc3ed51f05"
             ]
         ]
-    },
-    {
-        "id": "08cfd687626bdd27",
-        "type": "debug",
-        "z": "d138c3c5017744fe",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 670,
-        "y": 580,
-        "wires": []
     },
     {
         "id": "58b87862c97ca455",
