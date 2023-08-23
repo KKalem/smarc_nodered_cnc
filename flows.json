@@ -2646,7 +2646,8 @@
         "wires": [
             [
                 "c7d4d5de96d19781",
-                "d443219a2ff95383"
+                "d443219a2ff95383",
+                "dca3b158c362b292"
             ]
         ]
     },
@@ -3408,6 +3409,23 @@
                 "0c109ce581a119d2"
             ]
         ]
+    },
+    {
+        "id": "dca3b158c362b292",
+        "type": "debug",
+        "z": "65c60c3b274f73e3",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1190,
+        "y": 1660,
+        "wires": []
     },
     {
         "id": "38311862f50e9a0f",
@@ -6126,7 +6144,7 @@
         "type": "function",
         "z": "118dfccac2ca8a7d",
         "name": "bad plans",
-        "func": "plans = global.get(\"planning.plans\")\n\nfor(const plan_name in plans){\n    plan = plans[plan_name]\n    if(plan_name == \"\"){\n        plans[plan.name] = plan\n        delete plans[plan_name]\n        node.warn(\"Replaced \"+plan.name)\n    }\n    if(!plan.timeout) plan.timeout=0\n}\n\n\nglobal.set(\"planning.plans\", plans)\n\nnode.warn(JSON.stringify(Object.keys(plans)))\nnode.warn(JSON.stringify(plans[\"\"]))",
+        "func": "plans = global.get(\"planning.plans\")\n\nfor(const plan_name in plans){\n    plan = plans[plan_name]\n    if(plan_name == \"\"){\n        plans[plan.name] = plan\n        delete plans[plan_name]\n        node.warn(\"Replaced \"+plan.name)\n    }\n    if(!plan.timeout) plan.timeout=0\n}\n\n\nglobal.set(\"planning.plans\", plans)\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -7839,7 +7857,7 @@
         "type": "function",
         "z": "762b3e4e742fe2ea",
         "name": "setup drawing",
-        "func": "if(msg.payload == \"clear\"){\n    global.set(\"gui.drawn_track_names\", new Set())\n    return {}\n}\n\ntracks = global.get(\"planning.tracks\")\ndraw = msg.payload == \"draw\"\nstn = global.get(\"gui.selected_track_name\")\nif(!stn) return\n\ndrawn_track_names = global.get(\"gui.drawn_track_names\") || new Set()\n\nif(draw) drawn_track_names.add(stn)\nelse drawn_track_names.delete(stn)\n\nglobal.set(\"gui.drawn_track_names\", drawn_track_names)\n\nreturn {}",
+        "func": "if(msg.payload == \"clear\"){\n    global.set(\"gui.drawn_track_names\", new Set())\n    node.status(\"clear\")\n    return {}\n}\n\ntracks = global.get(\"planning.tracks\")\ndraw = msg.payload == \"draw\"\nstn = global.get(\"gui.selected_track_name\")\nif(!stn){\n    node.status(\"no stn\")\n    return {}\n} \n\ndrawn_track_names = global.get(\"gui.drawn_track_names\") || new Set()\n\nif(draw) drawn_track_names.add(stn)\nelse drawn_track_names.delete(stn)\n\nglobal.set(\"gui.drawn_track_names\", drawn_track_names)\n\nnode.status(\"done\")\nreturn {}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -7860,7 +7878,7 @@
         "z": "762b3e4e742fe2ea",
         "name": "update_markers_on_map",
         "info": "",
-        "x": 930,
+        "x": 1050,
         "y": 560,
         "wires": []
     },
@@ -7996,7 +8014,7 @@
         "z": "762b3e4e742fe2ea",
         "name": "update track list",
         "info": "",
-        "x": 900,
+        "x": 1020,
         "y": 520,
         "wires": []
     },
