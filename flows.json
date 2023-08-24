@@ -2558,7 +2558,7 @@
         "z": "65c60c3b274f73e3",
         "name": "map",
         "info": "",
-        "x": 720,
+        "x": 730,
         "y": 540,
         "wires": []
     },
@@ -3225,7 +3225,7 @@
         "links": [
             "1e0bd19ab17b797e"
         ],
-        "x": 955,
+        "x": 1175,
         "y": 740,
         "wires": []
     },
@@ -3235,7 +3235,7 @@
         "z": "65c60c3b274f73e3",
         "name": "map",
         "info": "",
-        "x": 990,
+        "x": 1210,
         "y": 780,
         "wires": []
     },
@@ -3255,7 +3255,8 @@
         "wires": [
             [
                 "0ceca9b8453d5332",
-                "e94f0c3160fd5f50"
+                "e94f0c3160fd5f50",
+                "15dba13f0dd73373"
             ]
         ]
     },
@@ -3421,7 +3422,7 @@
         "z": "65c60c3b274f73e3",
         "name": "",
         "pauseType": "delay",
-        "timeout": "5",
+        "timeout": "2",
         "timeoutUnits": "seconds",
         "rate": "1",
         "nbRateUnits": "1",
@@ -3437,6 +3438,50 @@
         "wires": [
             [
                 "68d602457e0bc822"
+            ]
+        ]
+    },
+    {
+        "id": "15dba13f0dd73373",
+        "type": "delay",
+        "z": "65c60c3b274f73e3",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 740,
+        "y": 680,
+        "wires": [
+            [
+                "a2cdf0a6b053cc6f"
+            ]
+        ]
+    },
+    {
+        "id": "a2cdf0a6b053cc6f",
+        "type": "function",
+        "z": "65c60c3b274f73e3",
+        "name": "switch to cloud caches if cloud",
+        "func": "if(msg.payload.type == \"cloud\"){\n    hide_swe = {command:{hidelayer:[\"Swe Bathy (local cache)\", \"Swe Bathy (cloud cache)\"]}}\n    node.send({payload:hide_swe})\n    show_cloud_esri = {command:{layer: \"Esri Sat (cloud cache)\"}}\n    node.send({payload:show_cloud_esri})\n    cloud_swe = {command:{showlayer:\"Swe Bathy (cloud cache)\"}}\n    node.send({payload:cloud_swe})\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 680,
+        "wires": [
+            [
+                "0c109ce581a119d2"
             ]
         ]
     },
