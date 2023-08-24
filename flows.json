@@ -1710,7 +1710,7 @@
         "path": "/worldmap",
         "overlist": "",
         "maplist": "OSMC,EsriS,EsriT",
-        "mapname": "Esri Sat (Cached)",
+        "mapname": "Esri Sat (local default)",
         "mapurl": "http://localhost:1889/mapproxy/service",
         "mapopt": "{\"map\":\"arcgis_world\",\"layers\":\"arcgis_world\",\"format\":\"image/png\"}",
         "mapwms": true,
@@ -1871,7 +1871,8 @@
             "fee0c34e30954d84",
             "e187b7ec19cac054",
             "365d3e492fd387f3",
-            "8003c684c72c20f0"
+            "8003c684c72c20f0",
+            "0618ae4fb20c4350"
         ],
         "x": 435,
         "y": 60,
@@ -2799,7 +2800,7 @@
         "font": "",
         "fontSize": "",
         "color": "#000000",
-        "x": 630,
+        "x": 610,
         "y": 820,
         "wires": []
     },
@@ -3224,7 +3225,7 @@
         "links": [
             "1e0bd19ab17b797e"
         ],
-        "x": 985,
+        "x": 955,
         "y": 740,
         "wires": []
     },
@@ -3234,7 +3235,7 @@
         "z": "65c60c3b274f73e3",
         "name": "map",
         "info": "",
-        "x": 1010,
+        "x": 990,
         "y": 780,
         "wires": []
     },
@@ -3243,64 +3244,37 @@
         "type": "function",
         "z": "65c60c3b274f73e3",
         "name": "mapproxy url",
-        "func": "if(msg.payload == \"cloud\"){\n    url = \"nodered.blue-robots.com\"\n}else if (msg.payload == \"local\"){\n    url = \"localhost:1889\"\n}\nt = \"http://\" + url + \"/mapproxy/service/\"\nnode.status(t)\nreturn {payload:t}",
+        "func": "if(msg.payload == \"cloud\"){\n    url = \"nodered.blue-robots.com\"\n}else if (msg.payload == \"local\"){\n    url = \"localhost:1889\"\n}\nt = \"http://\" + url + \"/mapproxy/service/\"\nnode.status(t)\nreturn {payload:{address:t, type:msg.payload}}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 430,
+        "x": 550,
         "y": 740,
         "wires": [
             [
-                "e94f0c3160fd5f50",
-                "0ceca9b8453d5332"
+                "0ceca9b8453d5332",
+                "e94f0c3160fd5f50"
             ]
         ]
-    },
-    {
-        "id": "5d5415816eb0390c",
-        "type": "link in",
-        "z": "65c60c3b274f73e3",
-        "name": "",
-        "links": [
-            "92be54cab625c80f"
-        ],
-        "x": 295,
-        "y": 780,
-        "wires": [
-            [
-                "68d602457e0bc822",
-                "964e95040e4297cf"
-            ]
-        ]
-    },
-    {
-        "id": "f2d052620d4c8111",
-        "type": "comment",
-        "z": "65c60c3b274f73e3",
-        "name": "cloud or local",
-        "info": "",
-        "x": 210,
-        "y": 740,
-        "wires": []
     },
     {
         "id": "e94f0c3160fd5f50",
         "type": "function",
         "z": "65c60c3b274f73e3",
         "name": "url/mapproxy/swe_bathy",
-        "func": "ret = {payload:{command:{}}};\nret.payload.command.map = {\n    \"overlay\":\"Swe Bathy (Cached)\", \n    \"url\":msg.payload,\n    \"opt\":{ \n        \"map\":\"swe_bathy\",\n        \"layers\":\"swe_bathy\",\n        \"format\":\"image/png\",\n        \"transparent\":true\n    },\n    \"wms\":true\n};\n\nreturn ret;",
+        "func": "ret = {payload:{command:{}}};\n\nret.payload.command.map = {\n    \"overlay\":\"Swe Bathy (\"+msg.payload.type+\" cache)\", \n    \"url\":msg.payload.address,\n    \"opt\":{ \n        \"map\":\"swe_bathy\",\n        \"layers\":\"swe_bathy\",\n        \"format\":\"image/png\",\n        \"transparent\":true\n    },\n    \"wms\":true\n};\n\n\nreturn ret;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 670,
+        "x": 790,
         "y": 720,
         "wires": [
             [
-                "232221c6c465a0ec"
+                "0c109ce581a119d2"
             ]
         ]
     },
@@ -3309,17 +3283,17 @@
         "type": "function",
         "z": "65c60c3b274f73e3",
         "name": "url/mapproxy/arcgis_world",
-        "func": "ret = {payload:{command:{}}};\nret.payload.command.map = {\n    \"name\":\"Esri Sat (Cached)\", \n    \"url\":msg.payload,\n    \"opt\":{ \n        \"map\":\"arcgis_world\",\n        \"layers\":\"arcgis_world\",\n        \"format\":\"image/png\"\n    },\n    \"wms\":true\n};\n\nreturn ret;",
+        "func": "ret = {payload:{command:{}}};\nret.payload.command.map = {\n    \"name\":\"Esri Sat (\"+msg.payload.type+\" cache)\", \n    \"url\":msg.payload.address,\n    \"opt\":{ \n        \"map\":\"arcgis_world\",\n        \"layers\":\"arcgis_world\",\n        \"format\":\"image/png\"\n    },\n    \"wms\":true\n};\n\nreturn ret;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 670,
+        "x": 790,
         "y": 760,
         "wires": [
             [
-                "ec0974bfd6838822"
+                "0c109ce581a119d2"
             ]
         ]
     },
@@ -3334,7 +3308,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 430,
+        "x": 410,
         "y": 820,
         "wires": [
             [
@@ -3364,46 +3338,6 @@
         "x": 720,
         "y": 340,
         "wires": []
-    },
-    {
-        "id": "232221c6c465a0ec",
-        "type": "rbe",
-        "z": "65c60c3b274f73e3",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": true,
-        "property": "payload",
-        "topi": "topic",
-        "x": 870,
-        "y": 720,
-        "wires": [
-            [
-                "0c109ce581a119d2"
-            ]
-        ]
-    },
-    {
-        "id": "ec0974bfd6838822",
-        "type": "rbe",
-        "z": "65c60c3b274f73e3",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": true,
-        "property": "payload",
-        "topi": "topic",
-        "x": 870,
-        "y": 760,
-        "wires": [
-            [
-                "0c109ce581a119d2"
-            ]
-        ]
     },
     {
         "id": "20e04a551398ff77",
@@ -3451,6 +3385,58 @@
                 "86c0559201508b50",
                 "087bc95837a9d012",
                 "28047fbd71cfcbd5"
+            ]
+        ]
+    },
+    {
+        "id": "12b06cc41a1f6b11",
+        "type": "link in",
+        "z": "65c60c3b274f73e3",
+        "name": "",
+        "links": [
+            "92be54cab625c80f"
+        ],
+        "x": 205,
+        "y": 780,
+        "wires": [
+            [
+                "964e95040e4297cf",
+                "cfc6fa940ccf3254"
+            ]
+        ]
+    },
+    {
+        "id": "42ddc8647d354d4f",
+        "type": "comment",
+        "z": "65c60c3b274f73e3",
+        "name": "cloud/local",
+        "info": "",
+        "x": 120,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "cfc6fa940ccf3254",
+        "type": "delay",
+        "z": "65c60c3b274f73e3",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 400,
+        "y": 740,
+        "wires": [
+            [
+                "68d602457e0bc822"
             ]
         ]
     },
@@ -8895,7 +8881,7 @@
         "origin": "",
         "scale": "70",
         "x": 620,
-        "y": 680,
+        "y": 740,
         "wires": [
             []
         ]
@@ -9065,7 +9051,7 @@
         "fontSize": "",
         "color": "#000000",
         "x": 620,
-        "y": 640,
+        "y": 700,
         "wires": []
     },
     {
@@ -9416,39 +9402,13 @@
         "finalize": "",
         "libs": [],
         "x": 390,
-        "y": 660,
+        "y": 720,
         "wires": [
             [
                 "d2a0ce4e6f8176cb",
                 "423f6ed2e934cc69"
             ]
         ]
-    },
-    {
-        "id": "513746a0acb84126",
-        "type": "link in",
-        "z": "270280acb5c31a68",
-        "name": "",
-        "links": [
-            "92be54cab625c80f"
-        ],
-        "x": 285,
-        "y": 660,
-        "wires": [
-            [
-                "1d1c2d204bdf0d3b"
-            ]
-        ]
-    },
-    {
-        "id": "2b63c4b91f1aab0e",
-        "type": "comment",
-        "z": "270280acb5c31a68",
-        "name": "cloud or local",
-        "info": "",
-        "x": 190,
-        "y": 660,
-        "wires": []
     },
     {
         "id": "1a35a7899f9585b0",
@@ -9479,6 +9439,32 @@
                 "86ad73493ada97b3"
             ]
         ]
+    },
+    {
+        "id": "a22096fbc2930a23",
+        "type": "link in",
+        "z": "270280acb5c31a68",
+        "name": "",
+        "links": [
+            "92be54cab625c80f"
+        ],
+        "x": 275,
+        "y": 720,
+        "wires": [
+            [
+                "1d1c2d204bdf0d3b"
+            ]
+        ]
+    },
+    {
+        "id": "ee5b85c9796e7625",
+        "type": "comment",
+        "z": "270280acb5c31a68",
+        "name": "cloud/local",
+        "info": "",
+        "x": 190,
+        "y": 740,
+        "wires": []
     },
     {
         "id": "e541e1e014a3f70b",
@@ -10306,32 +10292,6 @@
         "wires": []
     },
     {
-        "id": "2648acabeaadf850",
-        "type": "link in",
-        "z": "2e13c73254d13882",
-        "name": "",
-        "links": [
-            "92be54cab625c80f"
-        ],
-        "x": 225,
-        "y": 280,
-        "wires": [
-            [
-                "4c721b7968edea27"
-            ]
-        ]
-    },
-    {
-        "id": "16348ee11ddee788",
-        "type": "comment",
-        "z": "2e13c73254d13882",
-        "name": "cloud or local",
-        "info": "",
-        "x": 130,
-        "y": 300,
-        "wires": []
-    },
-    {
         "id": "4442eb265951fbfe",
         "type": "comment",
         "z": "2e13c73254d13882",
@@ -10404,6 +10364,32 @@
         "wires": []
     },
     {
+        "id": "331b3b1687fd1d26",
+        "type": "link in",
+        "z": "2e13c73254d13882",
+        "name": "",
+        "links": [
+            "92be54cab625c80f"
+        ],
+        "x": 225,
+        "y": 280,
+        "wires": [
+            [
+                "4c721b7968edea27"
+            ]
+        ]
+    },
+    {
+        "id": "e82f6fb4e1c34987",
+        "type": "comment",
+        "z": "2e13c73254d13882",
+        "name": "cloud/local",
+        "info": "",
+        "x": 120,
+        "y": 300,
+        "wires": []
+    },
+    {
         "id": "794a330739bf6415",
         "type": "config",
         "z": "d138c3c5017744fe",
@@ -10460,19 +10446,17 @@
         "id": "fdaca540562acf6b",
         "type": "function",
         "z": "d138c3c5017744fe",
-        "name": "deployment type",
-        "func": "s = \"local\"\nif(msg.payload.publicIPv4 == \"20.240.40.232\"){\n    s = \"cloud\"\n}\n\nnode.status(s)\nreturn {payload:s, topic:\"deployment_type\"}",
+        "name": "check if cloud",
+        "func": "if(msg.payload.publicIPv4 == \"20.240.40.232\"){\n    s = \"cloud\"\n    node.status(s)\n    global.set(\"gui.deployment_type\", s)\n    return {payload:s}\n}else{\n    node.status(\"not cloud\")\n}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 660,
-        "y": 500,
+        "x": 580,
+        "y": 440,
         "wires": [
-            [
-                "92be54cab625c80f"
-            ]
+            []
         ]
     },
     {
@@ -10486,11 +10470,12 @@
         "internalIPv6": false,
         "publicIPv4": true,
         "publicIPv6": false,
-        "x": 490,
-        "y": 540,
+        "x": 410,
+        "y": 480,
         "wires": [
             [
-                "fdaca540562acf6b"
+                "fdaca540562acf6b",
+                "06b5ac4d571086ec"
             ]
         ]
     },
@@ -10507,10 +10492,13 @@
             "f8cf73174a4c1a61",
             "c470ad64ba2e46ad",
             "2648acabeaadf850",
-            "4683a551857ab675"
+            "4683a551857ab675",
+            "331b3b1687fd1d26",
+            "12b06cc41a1f6b11",
+            "a22096fbc2930a23"
         ],
-        "x": 805,
-        "y": 500,
+        "x": 645,
+        "y": 580,
         "wires": []
     },
     {
@@ -10519,44 +10507,34 @@
         "z": "d138c3c5017744fe",
         "name": "cloud or local",
         "info": "",
-        "x": 830,
-        "y": 460,
+        "x": 600,
+        "y": 620,
         "wires": []
     },
     {
-        "id": "8862c190f6cb0bf4",
-        "type": "inject",
+        "id": "ca78e7469cac2e25",
+        "type": "function",
         "z": "d138c3c5017744fe",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "5",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 330,
+        "name": "cloud or local",
+        "func": "s = global.get(\"gui.deployment_type\") || \"local\"\nnode.status(s)\nreturn {payload:s}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
         "y": 580,
         "wires": [
             [
-                "686b67bc3ed51f05"
+                "ac2fb476d3d0de9e"
             ]
         ]
     },
     {
-        "id": "58b87862c97ca455",
+        "id": "cf3ff1bdedba32e4",
         "type": "inject",
         "z": "d138c3c5017744fe",
-        "name": "",
+        "name": "deploy, 1s, repeat 10s",
         "props": [
             {
                 "p": "payload"
@@ -10566,72 +10544,99 @@
                 "vt": "str"
             }
         ],
-        "repeat": "",
+        "repeat": "10",
         "crontab": "",
         "once": true,
         "onceDelay": "1",
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 490,
-        "y": 460,
-        "wires": [
-            [
-                "fdaca540562acf6b"
-            ]
-        ]
-    },
-    {
-        "id": "8003c684c72c20f0",
-        "type": "link in",
-        "z": "d138c3c5017744fe",
-        "name": "",
-        "links": [
-            "ecb32f1e69ab1244"
-        ],
-        "x": 205,
-        "y": 500,
-        "wires": [
-            [
-                "fdaca540562acf6b",
-                "ac4cfd4fa8af9895"
-            ]
-        ]
-    },
-    {
-        "id": "ac4cfd4fa8af9895",
-        "type": "delay",
-        "z": "d138c3c5017744fe",
-        "name": "",
-        "pauseType": "delay",
-        "timeout": "1",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 340,
+        "x": 190,
         "y": 540,
         "wires": [
             [
+                "ca78e7469cac2e25",
                 "686b67bc3ed51f05"
             ]
         ]
     },
     {
-        "id": "12b0a5b5d9322cec",
-        "type": "comment",
+        "id": "ac2fb476d3d0de9e",
+        "type": "rbe",
         "z": "d138c3c5017744fe",
-        "name": "map connected",
-        "info": "",
-        "x": 160,
-        "y": 460,
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 560,
+        "y": 580,
+        "wires": [
+            [
+                "92be54cab625c80f"
+            ]
+        ]
+    },
+    {
+        "id": "06b5ac4d571086ec",
+        "type": "function",
+        "z": "d138c3c5017744fe",
+        "name": "check if online",
+        "func": "if(msg.payload.publicIPv4){\n    s = \"Online\"\n}else{\n    s = \"Offline\"\n}\nnode.status(s)\nreturn {payload:s}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 500,
+        "wires": [
+            [
+                "591f801edd679067"
+            ]
+        ]
+    },
+    {
+        "id": "5eedea0ff009d99f",
+        "type": "ui_toast",
+        "z": "d138c3c5017744fe",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "GUI is",
+        "name": "gui is online",
+        "x": 870,
+        "y": 500,
         "wires": []
+    },
+    {
+        "id": "591f801edd679067",
+        "type": "rbe",
+        "z": "d138c3c5017744fe",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 730,
+        "y": 500,
+        "wires": [
+            [
+                "5eedea0ff009d99f"
+            ]
+        ]
     },
     {
         "id": "971e249694708d56",
